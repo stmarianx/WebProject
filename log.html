@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/log.css"/>
+    <title>ComPaste | Login</title>
+</head>
+<body>
+<div class="log_module">
+    <p class="titlu_app">ComPaste</p>
+    <p class="deasupra1">Username</p>
+    <input type ="text" class="logare" placeholder="Your username" name="username"  oninput=fct1()>
+    <p class="deasupra2">Password</p>
+    <input type="password" class="logare" placeholder="Your password" name="password" oninput="fct2()">
+    <a href="#" class="buton">Log in</a>
+    <hr>
+    <p style="color: 000854;">Continue with Google </p>
+    <a href="#">
+        <img class="con" src="google.jpg" >
+    </a>
+</div>
+
+
+
+<script>
+ function fct1()
+ {
+    var usernameInput = document.querySelector('input[name="username"]');
+    document.querySelector(".deasupra1").style.display="block";
+    if (usernameInput.value==="")
+    document.querySelector(".deasupra1").style.display="none";
+
+ }
+ function fct2()
+ {
+    var usernameInput = document.querySelector('input[name="password"]');
+    document.querySelector(".deasupra2").style.display="block";
+    if (usernameInput.value==="")
+    document.querySelector(".deasupra2").style.display="none";
+
+ }
+</script>
+
+</body>
+</html>
