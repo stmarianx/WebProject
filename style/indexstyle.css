@@ -38,6 +38,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .buton:hover{
     background-color: #2B0540;

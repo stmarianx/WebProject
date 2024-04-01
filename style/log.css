@@ -28,6 +28,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .buton:hover{
     background-color: #2B0540;
@@ -66,14 +67,17 @@ hr{
     height: 25px;
     margin-left: 3px;
 }
-@media only screen and (max-width:57em)  /*pentru tablete*/ /*mai trebuie lucrat*/
+@media only screen and (max-width:57em)  /*pentru tablete*/ 
 {
     .titlu_app
     {
         margin-top: 10%;
     }
-    .logare
-    {
-        margin-bottom: 20%;
+    .titlu_app{
+        margin-bottom: 20px;
     }
+    .logare{
+        margin-bottom: 30px;
+    }
+
 }
