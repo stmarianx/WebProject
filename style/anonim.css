@@ -127,9 +127,11 @@ hr{
 .ll{
     flex: 0 0 95%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .language_buttons{
-    width: 8%;
+    width: 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -145,4 +147,53 @@ hr{
     width: 80%;
     height: auto;
     align-self: center;
+}
+
+#inputBox {
+    margin-top: 4%;
+    width: 85%; 
+    height: 82%; 
+    resize: none; 
+    justify-self: center;
+    align-self: center;
+    overflow-y: auto; 
+    overflow-x: auto;
+    font-size: 15px;
+}
+
+.buton{
+    background-color: #5E0A8C;
+    font-family: Arial, sans-serif;
+    font-size: 4vh;
+    text-decoration: none;
+    color:white;
+    height: 80%;
+    width: 13%;
+    margin-top:auto;
+    margin-bottom: auto;
+    margin-left: 1.75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.buton:hover{
+    background-color: #2B0540;
+}
+
+.bottom
+{
+    display: flex;
+    flex-direction: row;
+    height: 8%;
+    width: 100%;
+}
+
+.title_in{
+    align-self: flex-start;
+    height: 65%;
+    width: 70%;
+    margin-left: 7.2%;
+    margin-top:auto;
+    margin-bottom: auto;
 }
