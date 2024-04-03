@@ -66,7 +66,7 @@ body{
     margin-left: 20px;
     border-radius: 5px;
     font-size: 12px;
-    width: 200px;
+    width: 65%;
     height: 13px;
 }
 
@@ -104,6 +104,7 @@ hr{
     display: flex; 
     margin-left: 10px;
 }
+
 .right-buttons {
     display: flex; 
     align-items: center;
@@ -113,6 +114,10 @@ hr{
     margin-right: 20px;
     color: #fff;
     /*align-self:  center;*/
+}
+
+.menu_button#b_p{
+    display: none;
 }
 .menu_button:hover{
     background-color:#5E0A8C;
@@ -141,7 +146,6 @@ hr{
     cursor: pointer;
     display: flex;
     margin: 2px;
-    flex-direction: column;
 }
 .limbaj img{
     width: 80%;
@@ -164,14 +168,14 @@ hr{
 .buton{
     background-color: #5E0A8C;
     font-family: Arial, sans-serif;
-    font-size: 4vh;
+    font-size: 3vh;
     text-decoration: none;
     color:white;
     height: 80%;
     width: 13%;
     margin-top:auto;
     margin-bottom: auto;
-    margin-left: 1.75%;
+    margin-left: 1.1%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,8 +196,105 @@ hr{
 .title_in{
     align-self: flex-start;
     height: 65%;
-    width: 70%;
+    width: 54%;
     margin-left: 7.2%;
     margin-top:auto;
     margin-bottom: auto;
+}
+.numar{
+   width: 15%;
+   margin-left: 1%;
+   height: 65%;
+   margin-top:auto;
+    margin-bottom: auto;
+}
+
+@media only screen and (max-width:82em)  
+{
+    .titlu_postare:hover
+    {
+    transform: scale(1.0);
+    }
+    .titlu_postare{
+        font-size: 13px;
+    }
+    .info_suplimentar{
+        font-size: 8px;
+    }
+
+}
+@media only screen and (max-width:65em) 
+{
+    .stanga{
+        flex: 0 0 68% ;
+    }
+    .dreapta{
+        flex: 0 0 32%;
+    }
+    .title_in{
+        width: 49%;
+        margin-left: 7%;
+    }
+    .numar{
+        width: 9%;
+    }
+    .buton{
+       width: 23%;
+       margin-left: 1.5%;
+    }
+    .limbaj img{
+        width: 100%;
+    }
+    .ll{
+        flex: 0 0 92%;
+    }
+    .titlu_postare{
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width:49em),  only screen and (orientation: portrait)  {
+    .menu_button#b_p{
+       display: block;
+    }
+
+    .dreapta{
+        display: none;
+    }
+    .stanga
+    {
+         flex: 0 0 100%;
+    }
+    .main_left{
+        flex-direction: column;
+        height: 89%;
+    }
+    .language_buttons
+    {
+        flex-direction: row;
+        width: 100%;
+        height: 10%;
+        justify-content: space-around;
+    }
+    .limbaj img{
+        margin-top: 0;
+        height: 50%;
+    }
+    .bottom{
+        height: 8%;
+    }
+    .ll{
+        width: 100%;
+        height: 65%;
+        margin-bottom: 0;
+    }
+    #inputBox{
+        height: 90%;
+    }
+    .buton{
+        font-size: 15px;
+    }
+    .title_in{
+        width: 48%;
+    }
 }
