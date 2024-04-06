@@ -1,0 +1,283 @@
+body{
+    background-color: #7F7F7F;
+     margin:0;
+     display: flex;
+ }
+ .stanga{
+    flex: 0 0 75% ;
+    display: flex;
+    background-color: #000854;
+    flex-direction: column;
+    height: 100vh;
+ }
+ .dreapta
+{
+    flex: 0 0 25%;
+    display: flex;
+    height: 100vh;
+    background-color: #000533;
+    flex-direction: column;
+}
+.title_a{
+    height: 7%;
+}
+.title_dreapta{
+    font-family: "Arial", sans-serif;
+    color: whitesmoke;
+    font-size: 4vh;
+    margin-top: 10%;
+    align-self: center;
+}
+.date_postare
+{
+    font-size: 15px;
+     margin-left:7.5%; 
+     margin-top:1.5%;
+    margin-bottom:auto;
+    flex-direction: row;
+    color:white;
+}
+.postare{
+     width: 100%;
+     height: 11%;
+     display: flex;
+     flex-direction: column;
+     font-family: "Arial", sans-serif;
+}
+.info_suplimentar
+{
+    font-size:10px;
+    margin-left: 15px;
+    align-self: flex-start;
+    color:#A8A8A8;
+}
+.titlu_postare{
+    color:#fff;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    align-self: center;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.titlu_postare:hover
+{
+    transform: scale(1.1);
+}
+.search-container {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#searchInput {
+    padding: 6px;
+    border: 1px solid #ccc;
+    margin-left: 20px;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 65%;
+    height: 13px;
+}
+
+#searchButton {
+    margin-left: 10px;
+    height: 30px;
+    border: none;
+    background-color: #5E0A8C;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#searchButton:hover {
+    background-color:#2B0540;
+}
+
+hr{
+    border-color: #5E0A8C;
+    width: 90%;
+    border-width: 0.5px;
+    align-self: center;
+}
+.navbar{
+    width: 100%;
+    height: 7%;
+    background-color:#0005339e;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.left-buttons {
+    display: flex; 
+    margin-left: 10px;
+}
+
+.right-buttons {
+    display: flex; 
+    align-items: center;
+}
+.menu_button{
+    text-decoration: none;
+    margin-right: 20px;
+    color: #fff;
+    /*align-self:  center;*/
+}
+
+.menu_button#b_p{
+    display: none;
+}
+.menu_button:hover{
+    background-color:#5E0A8C;
+}
+.main_left
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;    
+}
+.ll{
+    flex: 0 0 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#inputBox {
+    margin-top: 1%;
+    width: 85%; 
+    height: 82%; 
+    resize: none; 
+    justify-self: center;
+    align-self: center;
+    overflow-y: auto; 
+    overflow-x: auto;
+    font-size: 15px;
+}
+
+.buton{
+    background-color: #5E0A8C;
+    font-family: Arial, sans-serif;
+    font-size: 3vh;
+    text-decoration: none;
+    color:white;
+    height: 90%;
+    width: 30%;
+    margin-top:auto;
+    margin-bottom: auto;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.buton:hover{
+    background-color: #2B0540;
+}
+
+.bottom
+{
+    display: flex;
+    flex-direction: row;
+    height: 8%;
+    margin-left: 7%;
+    justify-content: space-between;
+    width: 86%;
+}
+
+.title_in{
+    align-self: flex-start;
+    height: 65%;
+    width: 54%;
+    margin-left: 7.2%;
+    margin-top:auto;
+    margin-bottom: auto;
+}
+.numar{
+   width: 15%;
+   margin-left: 1%;
+   height: 65%;
+   margin-top:auto;
+    margin-bottom: auto;
+}
+
+@media only screen and (max-width:82em)  
+{
+    .titlu_postare:hover
+    {
+    transform: scale(1.0);
+    }
+    .titlu_postare{
+        font-size: 13px;
+    }
+    .info_suplimentar{
+        font-size: 8px;
+    }
+
+}
+@media only screen and (max-width:65em) 
+{
+    .stanga{
+        flex: 0 0 68% ;
+    }
+    .dreapta{
+        flex: 0 0 32%;
+    }
+    .title_in{
+        width: 49%;
+        margin-left: 7%;
+    }
+    .numar{
+        width: 9%;
+    }
+    .buton{
+       width: 23%;
+       margin-left: 1.5%;
+    }
+    .ll{
+        flex: 0 0 92%;
+    }
+    .titlu_postare{
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width:49em),  only screen and (orientation: portrait)  {
+    .menu_button#b_p{
+       display: block;
+    }
+
+    .dreapta{
+        display: none;
+    }
+    .stanga
+    {
+         flex: 0 0 100%;
+    }
+    .main_left{
+        flex-direction: column;
+        height: 89%;
+    }
+    .bottom{
+        height: 8%;
+    }
+    .ll{
+        width: 100%;
+        height: 65%;
+        margin-bottom: 0;
+    }
+    #inputBox{
+        height: 90%;
+    }
+    .buton{
+        font-size: 15px;
+    }
+    .title_in{
+        width: 48%;
+    }
+}

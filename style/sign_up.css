@@ -1,0 +1,96 @@
+body{
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.sign_module{
+    margin:auto;
+    margin-top: 10%;
+    align-items: center;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.buton{
+    background-color: #5E0A8C;
+    font-family: Arial, sans-serif;
+    font-size: 4vh;
+    text-decoration: none;
+    color:white;
+    height: 15%;
+    width: 8em;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.buton:hover{
+    background-color: #2B0540;
+}
+.titlu_app{
+    font-family: "Arial", sans-serif;
+    color: #5E0A8C;
+    font-size: 8vh;
+    margin-top: 0;
+    margin-bottom: 5%;
+}
+table{
+    margin-bottom: 5%;
+    width: 50%;
+    align-self: center;
+    margin-left: 11%;
+}
+
+td,th{
+    padding: 10px;
+    height: 8%;
+}
+tr{
+    margin-bottom: 50px;
+}
+th:nth-child(1),
+td:nth-child(1) {
+    width: 30%; 
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 60%; 
+}
+
+
+hr{
+
+    margin-top: 20px;
+    border-color:#2B0540;
+    border-width: 1.5px;
+    width: 15em;
+}
+.con{
+    width: 25px;
+    height: 25px;
+    margin-left: 3px;
+}
+@media only screen and (max-width:70em)  /*pentru tablete*/ 
+{
+    .titlu_app
+    {
+        margin-top: 5%;
+    }
+    .titlu_app{
+        margin-bottom: 20px;
+    }
+    .sign_module{
+        margin-bottom: 30px;
+        margin-top: 5%;
+    }
+    table{
+        margin-left: 2%;
+    }
+
+}

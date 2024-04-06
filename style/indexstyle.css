@@ -1,21 +1,26 @@
-body{
+body,html{
    background-color: #7F7F7F;
     margin:0;
-    display: flex;
+    height: 100%;
 }
-
+.important{
+    display: flex;
+    flex-direction: row;
+    height:100%;
+}
 .stanga{
    flex: 0 0 42% ;
+   height: 100%;
    display: flex;
    background-color: #000533;
    flex-direction: column;
-   height: 100vh;
 }
 .dreapta
 {
     flex: 0 0 58%;
-    height: 100vh;
+    height: 100%;
     background-color: #000854;
+    overflow: auto;
 }
 
 .scris_stanga{
@@ -52,16 +57,16 @@ body{
 }
 .titlu_app{
     font-family: "Arial", sans-serif;
-    color: #5E0A8C;
+    color: #870EC9;
     font-size: 8vh;
 }
 
 .info{
-    color: #5E0A8C;
+    color: #870EC9;
     font-size: 5vh;
 }
 
-@media only screen and (max-width:57em)  /*pentru tablete*/
+@media only screen and (max-width:57em)  
 {
     .info#info-1
     {
@@ -69,7 +74,7 @@ body{
     }
 }
 
-@media only screen and (max-width:42em)  /*pentru telefoane*/
+@media only screen and (max-width:42em),  only screen and (orientation: portrait)   /*pentru telefoane*/
 {
     .dreapta{
         display: none;
