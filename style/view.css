@@ -3,6 +3,11 @@ body{
      margin:0;
      display: flex;
  }
+ h1{
+    color: white;
+    font-size: 20px;
+    margin-left: 7.5%;
+ }
  .stanga{
     flex: 0 0 75% ;
     display: flex;
@@ -19,7 +24,7 @@ body{
     flex-direction: column;
 }
 .title_a{
-    height: 7%;
+    height: 12%;
 }
 .title_dreapta{
     font-family: "Arial", sans-serif;
@@ -150,7 +155,7 @@ hr{
 #inputBox {
     margin-top: 1%;
     width: 85%; 
-    height: 82%; 
+    height: 75%; 
     resize: none; 
     justify-self: center;
     align-self: center;
@@ -232,12 +237,9 @@ hr{
         width: 49%;
         margin-left: 7%;
     }
-    .numar{
-        width: 9%;
-    }
     .buton{
-       width: 23%;
-       margin-left: 1.5%;
+       width: 39%;
+       margin-left: 0%;
     }
     .ll{
         flex: 0 0 92%;
@@ -246,7 +248,7 @@ hr{
         font-size: 11px;
     }
 }
-
+/** micsorare inaltime */
 @media only screen and (max-width:49em),  only screen and (orientation: portrait)  {
     .menu_button#b_p{
        display: block;
