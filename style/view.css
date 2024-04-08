@@ -25,6 +25,7 @@ body{
 }
 .title_a{
     height: 12%;
+    min-height: 80px;
 }
 .title_dreapta{
     font-family: "Arial", sans-serif;
@@ -48,6 +49,7 @@ body{
      display: flex;
      flex-direction: column;
      font-family: "Arial", sans-serif;
+     min-height: 60px;
 }
 .info_suplimentar
 {
@@ -248,7 +250,6 @@ hr{
         font-size: 11px;
     }
 }
-/** micsorare inaltime */
 @media only screen and (max-width:49em),  only screen and (orientation: portrait)  {
     .menu_button#b_p{
        display: block;

@@ -210,6 +210,26 @@ hr{
     margin-bottom: auto;
 }
 
+.choose{
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+}
+.buton1
+{
+    background-color: #5E0A8C;
+    font-family: Arial, sans-serif;
+    margin:0;
+    font-size: 3vh;
+    text-decoration: none;
+    color:white;
+    height: 80%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 @media only screen and (max-width:82em)  
 {
     .titlu_postare:hover
