@@ -1,16 +1,16 @@
 body{
     background-color: #7F7F7F;
-     margin:0;
-     display: flex;
- }
- .stanga{
+    margin:0;
+    display: flex;
+}
+.stanga{
     flex: 0 0 75% ;
     display: flex;
     background-color: #000854;
     flex-direction: column;
     height: 100vh;
- }
- .dreapta
+}
+.dreapta
 {
     flex: 0 0 25%;
     display: flex;
@@ -28,12 +28,12 @@ body{
 }
 
 .postare{
-     width: 100%;
-     height: 11%;
-     display: flex;
-     flex-direction: column;
-     font-family: "Arial", sans-serif;
-     min-height: 60px;
+    width: 100%;
+    height: 11%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Arial", sans-serif;
+    min-height: 60px;
 }
 .info_suplimentar
 {
@@ -97,17 +97,17 @@ hr{
     height: 6%;
     background-color:#0005339e;
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
 }
 
 .left-buttons {
-    display: flex; 
+    display: flex;
     margin-left: 10px;
 }
 
 .right-buttons {
-    display: flex; 
+    display: flex;
     align-items: center;
 }
 .menu_button{
@@ -128,7 +128,7 @@ hr{
     width: 100%;
     display: flex;
     flex-direction: row;
-    height: 100vh;    
+    height: 100vh;
 }
 .ll{
     flex: 0 0 95%;
@@ -156,12 +156,12 @@ hr{
 
 #inputBox {
     margin-top: 4%;
-    width: 85%; 
-    height: 82%; 
-    resize: none; 
+    width: 85%;
+    height: 82%;
+    resize: none;
     justify-self: center;
     align-self: center;
-    overflow-y: auto; 
+    overflow-y: auto;
     overflow-x: auto;
     font-size: 15px;
 }
@@ -203,10 +203,10 @@ hr{
     margin-bottom: auto;
 }
 .numar{
-   width: 15%;
-   margin-left: 1%;
-   height: 65%;
-   margin-top:auto;
+    width: 15%;
+    margin-left: 1%;
+    height: 65%;
+    margin-top:auto;
     margin-bottom: auto;
 }
 
@@ -230,11 +230,11 @@ hr{
     align-items: center;
     cursor: pointer;
 }
-@media only screen and (max-width:82em)  
+@media only screen and (max-width:82em)
 {
     .titlu_postare:hover
     {
-    transform: scale(1.0);
+        transform: scale(1.0);
     }
     .titlu_postare{
         font-size: 13px;
@@ -244,7 +244,7 @@ hr{
     }
 
 }
-@media only screen and (max-width:65em) 
+@media only screen and (max-width:65em)
 {
     .stanga{
         flex: 0 0 68% ;
@@ -260,8 +260,8 @@ hr{
         width: 9%;
     }
     .buton{
-       width: 23%;
-       margin-left: 1.5%;
+        width: 23%;
+        margin-left: 1.5%;
     }
     .limbaj img{
         width: 100%;
@@ -276,7 +276,7 @@ hr{
 
 @media only screen and (max-width:49em),  only screen and (orientation: portrait)  {
     .menu_button#b_p{
-       display: block;
+        display: block;
     }
 
     .dreapta{
@@ -284,7 +284,7 @@ hr{
     }
     .stanga
     {
-         flex: 0 0 100%;
+        flex: 0 0 100%;
     }
     .main_left{
         flex-direction: column;

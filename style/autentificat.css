@@ -4,12 +4,14 @@ body{
     display: flex;
     overflow-x: hidden; /* preveni overflow-ul în body */
 }
-.stanga{
-    flex: 0 0 75% ;
+.stanga {
+    flex: 0 0 75%;
     display: flex;
     background-color: #000854;
     flex-direction: column;
-    height: 100vh;
+    height: 100%; /* Înălțimea se adaptează la conținut */
+    overflow-x: hidden; /* Ascunde scroll-ul orizontal */
+    overflow-y: auto; /* Permite scroll-ul vertical dacă este necesar */
 }
 .dreapta
 {
@@ -124,12 +126,12 @@ hr{
 .menu_button:hover{
     background-color:#5E0A8C;
 }
-.main_left
-{
+.main_left {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    height: 100vh;
+    flex-direction: column; /* Schimbat de la row la column pentru a împărți spațiul pe verticală */
+    height: auto; /* Înălțimea va fi determinată de conținut */
+    overflow: hidden; /* Ascunde overflow-ul pentru a evita scroll-ul nedorit */
 }
 .ll{
     flex: 0 0 95%;
@@ -321,12 +323,6 @@ hr{
     }
 }
 
-
-.gestiune-postari {
-    margin: 20px 0;
-    color: #FFF;
-}
-
 .gestiune-postari h2 {
     margin-bottom: 15px;
 }
@@ -336,23 +332,57 @@ hr{
 }
 
 .postare {
+    position: relative; /* Adaugă poziție relativă pentru a poziționa butoanele absolut */
     background-color: #00062E;
-    padding: 10px;
-    margin-bottom: 20px;
     border-radius: 5px;
     color: #FFF;
+    margin: 10px 0; /* Adaugă spațiu între postări */
+    padding: 10px; /* Spațiu în jurul conținutului postării */
+}
+.postare {
+    padding-bottom: 20px; /* Spațiu pentru linia <hr> */
+    margin-bottom: 30px; /* Spațiu între postări */
 }
 
-.postare-actiuni {
+/* Stilizează și poziționează butoanele de acțiune în interiorul postării */
+.postare .postare-actiuni {
+    position: absolute;
+    top: 10px; /* Ajustează dacă este necesar */
+    right: 10px; /* Ajustează dacă este necesar */
     display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
 
-.postare-actiuni .buton {
-    padding: 5px 10px;
-    font-size: 1rem; /* Ajustează conform nevoilor */
+/* Stilizarea specifică butonului */
+.postare .postare-actiuni .buton {
+    padding: 5px 10px; /* Adaugă padding */
+    font-size: 0.8rem; /* Micșorează dimensiunea fontului dacă este necesar */
+    margin: 0;
+    background-color: #5E0A8C;
+    color: #fff;
+    border: none;
+    border-radius: 3px; /* Margini rotunjite */
+    cursor: pointer;
+    max-width: 100px;
 }
+/* Asigurăm că linia <hr> este poziționată sub butoane și se întinde pe toată lățimea postării */
+.postare hr {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 20px); /* Scădem padding-ul pentru a se potrivi în container */
+    border: none;
+    height: 1px;
+    background-color: #5E0A8C; /* Alege o culoare care se potrivește cu design-ul */
+    margin: 0;
+}
+/* Asigură-te că butoanele nu depășesc dimensiunea postării */
+.postare .postare-actiuni .buton {
+    max-width: calc(100% - 20px); /* Previne depășirea lățimii postării, ajustează dacă este necesar */
+}
+
 .optiuni-avansate {
     margin: 20px 0;
     color: #FFF;
