@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComPaste | Documentație</title>
+    <style>
+        body {
+            margin:0;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <header>
+            <h1>ComPaste</h1>
+        </header>
+        <div role="contentinfo">
+            <p>Autori: </p>
+            <ul>
+                <li>Teofil Bolotă</li>
+                <li>Marian Stoica</li>
+            </ul>
+            <p>Afiliere: Universitatea „Alexandru Ioan Cuza”, Facultatea de Informatică Iași</p>
+        </div>
+        <section>
+        <h2 aria-level="1">1. Descriere generală</h2>
+        <p>Aplicația ComPaste are ca obiectiv creearea unui mediu în care partajarea de documente relativ scurte va fi foarte simplă și rapidă.
+        Totodată, ne propunem să oferim clienților și posibilitatea de a compila unele fișiere scrise în diverse limbaje de programare. Pe lângă
+        funcționalitățile principale, utilizatorii aplicației vor avea acces și la alte capabilități precum menținerea unui istoric al postărilor
+      (doar pentru clienții autentificați). Versiunile următoare vor aduce și ele noi funcționalități (de exemplu va fi permisă ierarhizare în foldere a 
+        postărilor utilizatorilor autentificați), aplicația fiind acum la prima versiune.</p>
+        <section>
+            <h3 aria-level="2">1.1. Publicul țintă</h3>
+           <p>Aplicația se adresează mai multor categorii de public printre care amintim elevii de liceu care vor putea să distribuie 
+            ușor între ei materialele folosite la materia informatică, fără a folosi instrumente mai complexe precum github-ul (succesul PasteBin 
+            este relevant în acest sens).
+           </p>
+        </section>
+       </section>
+
+    <section>
+        <h2 aria-level="2">2. Informații despre aplicație</h2>
+        <p> În paragrafele următoare vor fi menționate principalele funcționalități ale aplicației 
+            și modul în care aceasta este structurată.</p>
+        
+        <section>
+            <h3 aria-level="2">2.1. Funcționalități de bază</h3>
+             <p>Principala menire a cestei aplicații este, așa cum s-a menționat mai sus, facilitarea distribuirii de cod 
+                între diverse persoane. Totuși, pe lângă aceste lucruri sunt și alte aspecte care trebuie menționate. Astfel,
+                trenuie menționat că aplicația va putea fi folosită atât de către utilizatori logați (care vor avea ceva funcționalități 
+                suplimentare), cât și de utilizatori nelogați (sau anonimi).
+             <p>Utilizatorii logați vor avea posibilitatea de a posta fișiiere în care numele lor să fie vizibil, iar aceste postări 
+                vor avea durată mai lungă de viață (spre deosebire de utillizatorii anonimi care vor putea posta un document pentru o perioadă
+                de maxim 30 de zile). Totodată, aceștia vor avea posibilitatea de a selecta alți utilizatori care să aibă posibilitatea de 
+                a modifica fișierul respectiv. În aceeași ordine de idei se încadrează și menținerea unui istoric a modificărilor fișierului,
+                oferindu-se posibilitatea de a face rollback către o versiune anterioară în cazul în care acest lucru este necesar. Este de la sine 
+                înțeles că utilizatorii vor putea să editeze propriile postări și să le șteargă. De asemenea se va oferi  acestei categorii de 
+                utilizatori și posibilitatea de a selecta opțiunea ca postarea să se distrugă după ce aceasta este citită (burn after read) și 
+                protejarea postărilor cu o parolă. Perla coroanei este însă serviciul de compilare ce va fi disponibil inițial doar pentru limbajul c++.
+                Astfel, clienții aplicației vor avea posibilitatea să își compileze fișierul pentru a vedea rezultatele programului scris.
+             </p>
+             <p>Utilizatorii anonimim vor avea mult mai puține featururi, ei putând doar să posteze anumite documente și să 
+                selecteze durata de viață a acestora (cu limita maximă de 30 de zile ). Tototdată ei vor putea vizualiza postările
+                publicate de alți clienți.
+             </p>
+        </section>
+        <section>
+            <h3 aria-level="2">2.2. Designul aplicației </h3>
+            <p> Designul aplicației este unul relativ minimalist care permite utilizatorilor să navigheze ușor între diversele meniuri ale 
+                aplicației. Astfel, ei vor putea avea acces ușor la postări în timp ce redactează altă postare, iar utilizatorii logați 
+                vor putea să acceseze ușor funcționalitățile dedicate lor.
+            </p>
+        </section>
+    </section>
+    <section>
+        <h2 aria-level="2">3. Interfața utilizatorului</h2>
+        <section>
+            <h3 aria-level="2">3.1. Aranjarea  în pagină și strucura generală</h3>
+            <p>În cele ce urmează vor fi prezentate paginile web aferente aplicației și modul în care informmațiile sunt așezate
+                în acestea. Fiecare pagină va avea câte un subcapitol dedicat.
+            </p>
+            <section>
+                <h4 aria-level="3">3.1.1 Landing Page</h4>
+                <p>
+                    Această pagină are un design minimalist cu ecranul împărțit în două părți inegale ca lățime ocupată 
+                    din ecran.Această împărțire va fi folosită în aproape toate celelalte pagin pentru a se induce ideea 
+                    de unitate în cadrul aplicației. În partea stângă se află
+                    3 butoane care  permit logarea în aplicație, înregistrarea în aplicație sau utilizarea acesteia fără a se loga.
+                    În partea dreaptă se oferă câteva informații despre aplicație și despre funcționalitățile ei.
+                </p>
+            </section>
+            <section>
+                <h4 aria-level="3">3.1.2 Pagina utilizatorului anonim</h4>
+                <p>Această pagină este de asemenea împărțită în două jumătăți având în zona superioară 
+                    o bară de meniu în care vor fi prezente opțiunule de logare și de înregistrare în aplicație
+                </p>
+                <p>În partea stângă a paginii va fi prezent o zonă ân care utilizatorul va putea crea o nouă postare căreia să-i
+                    seteze un titlu și perioada în care aceasta va fi disponibilă. Totodată, va avea posibilitatea să aleagă în ce limbaj
+                    de programare a fost scrisă acea postare, acest lucru fiind posibil prin apăsarea pe pictograma corespunzătoare 
+                    limbajului ales( pictograme aflate la îndemână în dreapta zonei de input). Tot aici are sens să amintim că se oferă 
+                    syntax highlight în timpul scrierii postării pentru a ușura munca celui ce scrie postarea.
+                </p>
+                <p>În partea dreaptă vor fi afișate postările publicate deja de alți utilizatori, oferindu-se posibilitatea de a 
+                    căuta o anumită postare după titlul acesteia.
+                </p>
+            </section>
+            <section>
+                <h4 aria-level="3">3.1.2 Pagina utilizatorului logat</h4>
+                <p> Această pagină are o structură similară cu pagina dedicată utilizatorului anonim, avînd un design asemănător.
+                    Diferențele apar în multitudinea de setări pe care clientul le poate face înainte de a posta. Utilizatorul are 
+                    astfel posibilitatea de a fructifica toate funcționalitățile la care dpar el are acces (dintre acestea reamintim despre
+                    opțiunea burn after read și ce de parolare a unei postări).
+                </p>
+                <p>În partea dreaptă utilizatorul va putea alege dacă să vizualizeze postările publice sau propriile postări 
+                    (lucru pe care îl poate face și accesând o opțiune din meniul din partea superioară unde va vizualiza structura 
+                    exactă a postărilor sale împărțite în foldere). Prin apăsarea pe unul dintre titlurile propriilor postări clientul va fi 
+                    redirecționat către o pagină dedicată afișării postărilor în care va avea posibilitatea să editeze sau să șteargă postarea
+                    sau să aleagă să compileze fișierul (dacă acesta este scris în unul din limbajele acceptate).
+                </p>
+            </section>
+            <section>
+                <h4 aria-level="3">3.1.3 Pagina dedicată compilării</h4>
+                <p>În această zonă a aplicației, clientul va avea posibilitatea de a compila postarea aleasă 
+                    el putând să încarce și fișiere de input pentru programul său și să primească apoi rezultatele compilării. 
+                    Trebuie reiterat că această funcționalitae va fi inițial disponibilă doar pentru postările scrise în C++, fapt ce va 
+                    fi amintit și utilizatoruluui în momentul în care încearcă să compileze postarea sa.
+                </p>
+            </section>
+            <section>
+                <h4 aria-level="3">3.1.2 Pagina de vizualizare a postării</h4>
+                <p>
+                    Pagina de afișare a postărilor va diferi în funcție de tipul de utilizator care vrea să vizualizeze o postare. 
+                    Astfel, utilizatorul anonim va putea doar să vizualizeze conținutul postării și să vadă dimensiunea sa, titlul și
+                    numele autorului care a făcut postarea. 
+                </p>
+                <p>
+                    În cazul utilizatorului autentificat, acesta va putea să își editeze propriile postări să aleagă să 
+                    le compileze sau să adauge alți colaboratori (desigur va putea să și elimine colaboratori) la acel fișier.
+                    Totodată, el va vedea și istoricul versiunilor anterioare ale fișierului, putând să facă rollback către o 
+                    versiune anterioară în cazul în care dorește acest lucru. Deși este evident, vom reaminti că în cadrul acestei pagini se
+                    va putea șterge o postare.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h3 aria-level="2">3.2. Aspectul cromatic  </h3>
+            <p>Au fost folosite preponderent aceleași culori în cadrul diverselor pagini ale aplicației, optându-se pentru două nuanțe
+                diferite de albastru culoare ce inspiră o anumită sobrietate care induce ideea că această aplicație este dedicată 
+                unor taskuri cu adevărat importante. Utilizarea butoanelor mov creează un aspect vizual plăcut, liniștitor, adăugînd o pată 
+                de culoare în cadrul tuturor paginilor în care acestea aapar. Culoarea albă a fontului oferă o vizibilitate excelentăm
+                 iar mărimea lui este aleasă astfel încât să nu fie problematică descifrarea conșinutului scris.
+            </p>
+        </section>
+    </section>
+
+    <section>
+            <h2 aria-level="2">4. Alte observații</h2>
+            <p>
+                Merită amintit faptul că aplicația are un design adaptabil în funcție de dispozitiva, clienții avînd opțiunea de a o 
+                folosi pe laptop, tabletă sau smartphone, fără ca trecerea pe un alt tip de dispozitiv să altereze funcționalitățile genereale
+                ale aplicației. trecerea de la o platformă hard la alta se face ușor fără ca utilizatorul să fie bulversat cu schimbări majore 
+                de design.
+            </p>
+             <p> Pentru partea de syntax highlight s-a folosit biblioteca CodeMirror, o bibliotecă open-source des utilizată pentru 
+                aceste cerințe și de alte aplicații web dintre care amintim Pastebin și Pbinfo.
+             </p>
+    </section>
+    </article>
+</body>
+</html>

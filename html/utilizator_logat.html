@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComPaste | Posts </title>
+    <link rel="stylesheet" href="../style/logat.css">
+</head>
+<body>
+    <div class="stanga">
+     <div class="navbar">
+        <div class="left-buttons">
+            <a href="../index.html" class="menu_button">Main Page</a>
+            <a href="../html/posts.html" class="menu_button" id="b_p">Posts</a>
+        </div>
+        <div class="right-buttons">
+            <a href="log.html" class="menu_button">Login</a>
+            <a href="signup.html" class="menu_button">Sign up</a>
+        </div>
+     </div>
+     <div class="main_left">
+        <div class="ll">
+            <textarea id="inputBox" placeholder="Your code here"></textarea>
+             <div class="bottom">
+                <input type ="text" class="title_in" placeholder="Document Title" name="titlu">
+                <input type="number" class="numar" name="numar" min="0" max="90" placeholder="days">
+                <button class="buton" id="1" >Poste it</button> 
+            </div>  
+            <div class="optiuni-avansate">
+                <h2>Opțiuni Avansate</h2>
+                <div class="optiuni-container">
+                    <label class="container">Burn after read
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Password protected
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        
+            <div class="selectare-utilizatori">
+                <h2>Permite Altora să Modifice Postarea</h2>
+                <input type="text" placeholder="Adaugă utilizator" class="input-utilizator">
+                <button class="buton" id="b1">Adaugă</button>
+                <!-- Lista de utilizatori adăugați va apărea aici -->
+            </div>
+        </div>
+        <div class="language_buttons">
+            <div class="limbaj" id="button1">
+                <img src="../images/c++1.png" alt="C++">
+            </div>
+            <div class="limbaj" id="button2">
+                <img src="../images/java.png" alt="Java">
+            </div>
+            <div class="limbaj" id="button3">
+                <img src="../images/python.png" alt="Python">
+            </div>
+            <div class="limbaj" id="button4">
+                <img src="../images/txt.png" alt="TXT">
+            </div>
+        </div>
+        
+     </div>
+    </div>
+    <div class="dreapta">
+        <h2 class="title_dreapta">Public Posts</h2>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button type="button" id="searchButton">Search</button>
+        </div>
+        <div class="choose">
+            <button class="buton1"  >Public posts</button> 
+            <button class="buton1"  >Your posts</button> 
+        </div>
+        <div class="postare">
+                <a href="view_p.html" class="titlu_postare">Prima postare</a>
+                <p class="info_suplimentar">Gigel | 12.02.2023 | 23kb | c++</p>
+                <hr>
+        </div>
+        <div class="postare">
+            <a href="view_p.html" class="titlu_postare">O postare cu un titlu ceva mai lung</a>
+                <p class="info_suplimentar">Gigel Andrei Becali | 12.02.2023 | 23kb | c++</p>
+                <hr>
+        </div>
+        <div class="postare">
+            <a href="#" class="titlu_postare">O postare cu un titlu ceva mai lung decat</a>
+            <p class="info_suplimentar">George Octavian Popescu  | 12.02.2023 | 23kb | c++</p>
+            <hr>     
+        </div>
+    </div>
+</body>
+</html>
