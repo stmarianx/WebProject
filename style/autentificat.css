@@ -130,7 +130,7 @@ hr{
     width: 100%;
     display: flex;
     flex-direction: column; /* Schimbat de la row la column pentru a împărți spațiul pe verticală */
-    height: auto; /* Înălțimea va fi determinată de conținut */
+    height: 75vh;
     overflow: hidden; /* Ascunde overflow-ul pentru a evita scroll-ul nedorit */
 }
 .ll{
