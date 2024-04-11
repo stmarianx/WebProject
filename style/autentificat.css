@@ -1,427 +1,315 @@
-body{
-    background-color: #7F7F7F;
-    margin:0;
+/* autentificat.css */
+body {
     display: flex;
-    overflow-x: hidden; /* preveni overflow-ul în body */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #7F7F7F;
+    font-family: 'Arial', sans-serif;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Layout Styles */
 .stanga {
     flex: 0 0 75%;
-    display: flex;
     background-color: #000854;
-    flex-direction: column;
-    height: 100%; /* Înălțimea se adaptează la conținut */
-    overflow-x: hidden; /* Ascunde scroll-ul orizontal */
-    overflow-y: auto; /* Permite scroll-ul vertical dacă este necesar */
+    padding: 20px;
+    min-height: 100vh;
 }
-.dreapta
-{
+
+.dreapta {
     flex: 0 0 25%;
-    display: flex;
-    height: 100vh;
     background-color: #000533;
-    flex-direction: column;
+    padding: 20px;
+    min-height: 100vh;
+    color: white;
 }
 
-.title_dreapta{
-    font-family: "Arial", sans-serif;
-    color: whitesmoke;
-    font-size: 4vh;
-    margin-top: 10%;
-    align-self: center;
-}
-
-.postare{
-    width: 100%;
-    height: 11%;
-    display: flex;
-    flex-direction: column;
-    font-family: "Arial", sans-serif;
-    min-height: 60px;
-}
-.info_suplimentar
-{
-    font-size:10px;
-    margin-left: 15px;
-    align-self: flex-start;
-    color:#A8A8A8;
-}
-.titlu_postare{
-    color:#fff;
-    font-size: 16px;
-    text-decoration: none;
-    cursor: pointer;
-    align-self: center;
-    margin-top: 10px;
-    margin-bottom: 0;
-}
-.titlu_postare:hover
-{
-    transform: scale(1.1);
-}
-.search-container {
-    margin: 20px;
-    display: flex;
-    align-items: center;
-}
-
-#searchInput {
-    padding: 6px;
-    border: 1px solid #ccc;
-    margin-left: 20px;
-    border-radius: 5px;
-    font-size: 12px;
-    width: 65%;
-    height: 13px;
-}
-
-#searchButton {
-    margin-left: 10px;
-    height: 30px;
-    border: none;
-    background-color: #5E0A8C;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-#searchButton:hover {
-    background-color:#2B0540;
-}
-
-hr{
-    border-color: #5E0A8C;
-    width: 90%;
-    border-width: 0.5px;
-    align-self: center;
-}
-.navbar{
-    width: 100%;
-    height: 6%;
-    background-color:#0005339e;
+/* Navigation Bar Styles */
+.navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    margin-bottom: 20px;
 }
 
-.left-buttons {
-    display: flex;
-    margin-left: 10px;
-}
-
-.right-buttons {
-    display: flex;
-    align-items: center;
-}
-.menu_button{
-    text-decoration: none;
-    margin-right: 20px;
-    color: #fff;
-    /*align-self:  center;*/
-}
-
-.menu_button#b_p{
-    display: none;
-}
-.menu_button:hover{
-    background-color:#5E0A8C;
-}
-.main_left {
-    width: 100%;
-    display: flex;
-    flex-direction: column; /* Schimbat de la row la column pentru a împărți spațiul pe verticală */
-    height: 75vh;
-    overflow: hidden; /* Ascunde overflow-ul pentru a evita scroll-ul nedorit */
-}
-.ll{
-    flex: 0 0 95%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.language_buttons{
-    width: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.limbaj {
+.menu_button {
+    padding: 10px;
+    background-color: #2980B9;
+    color: white;
+    border: none;
+    margin-right: 5px;
     cursor: pointer;
-    display: flex;
-    margin: 2px;
 }
-.limbaj img{
-    width: 80%;
-    height: auto;
-    align-self: center;
+
+.menu_button:hover {
+    background-color: #3498DB;
+}
+
+/* Post Creation Area Styles */
+.ll {
+    background-color: white;
+    padding: 20px;
 }
 
 #inputBox {
-    margin-top: 4%;
-    width: 85%;
-    height: 82%;
-    resize: none;
-    justify-self: center;
-    align-self: center;
-    overflow-y: auto;
-    overflow-x: auto;
-    font-size: 15px;
-}
-
-.buton{
-    background-color: #5E0A8C;
-    font-family: Arial, sans-serif;
-    font-size: 3vh;
-    text-decoration: none;
-    color:white;
-    height: 80%;
-    width: 13%;
-    margin-top:auto;
-    margin-bottom: auto;
-    margin-left: 1.1%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-.buton:hover{
-    background-color: #2B0540;
-}
-
-.bottom
-{
-    display: flex;
-    flex-direction: row;
-    height: 8%;
     width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
 }
 
-.title_in{
-    align-self: flex-start;
-    height: 65%;
-    width: 54%;
-    margin-left: 7.2%;
-    margin-top:auto;
-    margin-bottom: auto;
-}
-.numar{
-    width: 15%;
-    margin-left: 1%;
-    height: 65%;
-    margin-top:auto;
-    margin-bottom: auto;
+.title_in, .numar {
+    width: calc(50% - 10px);
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
-.choose{
-    height: 8%;
-    display: flex;
-    flex-direction: row;
-}
-.buton1
-{
-    background-color: #5E0A8C;
-    font-family: Arial, sans-serif;
-    margin:0;
-    font-size: 3vh;
-    text-decoration: none;
-    color:white;
-    height: 80%;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.buton {
+    padding: 10px 20px;
+    background-color: #8E44AD;
+    color: white;
+    border: none;
     cursor: pointer;
 }
-@media only screen and (max-width:82em)
-{
-    .titlu_postare:hover
-    {
-        transform: scale(1.0);
-    }
-    .titlu_postare{
-        font-size: 13px;
-    }
-    .info_suplimentar{
-        font-size: 8px;
-    }
 
-}
-@media only screen and (max-width:65em)
-{
-    .stanga{
-        flex: 0 0 68% ;
-    }
-    .dreapta{
-        flex: 0 0 32%;
-    }
-    .title_in{
-        width: 49%;
-        margin-left: 7%;
-    }
-    .numar{
-        width: 9%;
-    }
-    .buton{
-        width: 23%;
-        margin-left: 1.5%;
-    }
-    .limbaj img{
-        width: 100%;
-    }
-    .ll{
-        flex: 0 0 92%;
-    }
-    .titlu_postare{
-        font-size: 11px;
-    }
+.buton:hover {
+    background-color: #9B59B6;
 }
 
-@media only screen and (max-width:49em),  only screen and (orientation: portrait)  {
-    .menu_button#b_p{
-        display: block;
-    }
-
-    .dreapta{
-        display: none;
-    }
-    .stanga
-    {
-        flex: 0 0 100%;
-    }
-    .main_left{
-        flex-direction: column;
-        height: 89%;
-    }
-    .language_buttons
-    {
-        flex-direction: row;
-        width: 100%;
-        height: 10%;
-        justify-content: space-around;
-    }
-    .limbaj img{
-        margin-top: 0;
-        height: 50%;
-    }
-    .bottom{
-        height: 8%;
-    }
-    .ll{
-        width: 100%;
-        height: 65%;
-        margin-bottom: 0;
-    }
-    #inputBox{
-        height: 90%;
-    }
-    .buton{
-        font-size: 15px;
-    }
-    .title_in{
-        width: 48%;
-    }
+/* Language Button Styles */
+.language_button {
+    padding: 10px;
+    margin-right: 5px;
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
-.gestiune-postari h2 {
-    margin-bottom: 15px;
+.language_button:hover {
+    background-color: #5DADE2;
 }
 
-.postari-container {
+/* Right Section Styles */
+.title_dreapta {
+    margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    margin-right: 10px;
+}
+
+#searchButton {
+    padding: 10px 20px;
+    background-color: #27AE60;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#searchButton:hover {
+    background-color: #2ECC71;
+}
+
+/* Post Listing Styles */
+.postare {
+    background-color: #4E5D6C;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.titlu_postare {
+    color: #82E0AA;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.info_suplimentar {
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal_content {
+    background-color: #ECF0F1;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #999;
+    width: 40%;
+}
+
+.close {
+    color: #333;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Additional Options Styles */
+.additional_option {
+    display: block;
+    margin: 10px 0;
+}
+
+.additional_option input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Clearfix for floated elements */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* Post Management Controls Styles */
+.post_management_controls {
+    background-color: #5D6D7E;
+    padding: 10px;
     margin-top: 10px;
 }
 
-.postare {
-    position: relative; /* Adaugă poziție relativă pentru a poziționa butoanele absolut */
-    background-color: #00062E;
-    border-radius: 5px;
-    color: #FFF;
-    margin: 10px 0; /* Adaugă spațiu între postări */
-    padding: 10px; /* Spațiu în jurul conținutului postării */
-}
-.postare {
-    padding-bottom: 20px; /* Spațiu pentru linia <hr> */
-    margin-bottom: 30px; /* Spațiu între postări */
-}
-
-/* Stilizează și poziționează butoanele de acțiune în interiorul postării */
-.postare .postare-actiuni {
-    position: absolute;
-    top: 10px; /* Ajustează dacă este necesar */
-    right: 10px; /* Ajustează dacă este necesar */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-}
-
-/* Stilizarea specifică butonului */
-.postare .postare-actiuni .buton {
-    padding: 5px 10px; /* Adaugă padding */
-    font-size: 0.8rem; /* Micșorează dimensiunea fontului dacă este necesar */
-    margin: 0;
-    background-color: #5E0A8C;
-    color: #fff;
+.edit_post, .delete_post {
+    padding: 5px 10px;
+    background-color: #2980B9;
+    color: white;
     border: none;
-    border-radius: 3px; /* Margini rotunjite */
+    margin-right: 5px;
     cursor: pointer;
-    max-width: 100px;
-}
-/* Asigurăm că linia <hr> este poziționată sub butoane și se întinde pe toată lățimea postării */
-.postare hr {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: calc(100% - 20px); /* Scădem padding-ul pentru a se potrivi în container */
-    border: none;
-    height: 1px;
-    background-color: #5E0A8C; /* Alege o culoare care se potrivește cu design-ul */
-    margin: 0;
-}
-/* Asigură-te că butoanele nu depășesc dimensiunea postării */
-.postare .postare-actiuni .buton {
-    max-width: calc(100% - 20px); /* Previne depășirea lățimii postării, ajustează dacă este necesar */
 }
 
-.optiuni-avansate {
-    margin: 20px 0;
-    color: #FFF;
+.edit_post:hover {
+    background-color: #3498DB;
 }
 
-.optiuni-container {
-    display: flex;
-    flex-direction: column;
+.delete_post {
+    background-color: #C0392B;
 }
 
-.container input[type="checkbox"] {
-    margin-right: 10px;
-}
-.selectare-utilizatori {
-    margin: 20px 0;
-    color: #FFF;
+.delete_post:hover {
+    background-color: #E74C3C;
 }
 
-.input-utilizator {
+.version_history {
     padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Additional Option Styles */
+.additional_option label {
+    color: white;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.additional_option input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Active Button Style */
+.buton1.active, .buton1:hover {
+    background-color: #8E44AD;
+    color: white;
+}
+
+/* Fix for the Buttons not floating properly */
+.left-buttons, .right-buttons {
+    display: inline-block;
+}
+
+/* Style for modal inputs and labels */
+.modal_content input[type="text"],
+.modal_content textarea {
+    width: 100%;
+    padding: 10px;
     margin: 10px 0;
-    width: calc(100% - 20px); /* Ajustează pentru padding */
-    border: 1px solid #AAA; /* Ajustează conform schemei de culori */
-    border-radius: 5px;
+    display: block;
 }
-.istoric-modificari {
-    margin: 20px 0;
-    color: #FFF;
+
+.modal_content label {
+    margin-top: 10px;
 }
-.ll, .language_buttons, .bottom, .input-utilizator, #inputBox, .buton {
-    max-width: 100%; /* Se asigură că elementele nu depășesc lățimea părintelui lor */
-    box-sizing: border-box; /* Include padding și border în lățimea elementului */
+
+/* Style for the Save Changes Button in Modal */
+.modal_content input[type="submit"] {
+    background-color: #27AE60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px 0;
 }
-#inputBox, .input-utilizator {
-    width: 100%; /* Ajustează lățimea pentru a preveni overflow-ul */
-    padding: 0 10px; /* Adaugă padding intern fără a afecta lățimea externă */
+
+.modal_content input[type="submit"]:hover {
+    background-color: #2ECC71;
 }
-/* În media queries sau în stilurile generale */
-.ll, .main_left, .language_buttons, .postare, .postari-container {
-    padding: 0 10px; /* Ajustează după cum este necesar pentru a preveni overflow-ul */
+
+/* Adjustments to the Search and Filter Buttons */
+.choose {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.buton1 {
+    padding: 10px 20px;
+    background-color: #2980B9;
+    color: white;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    display: inline-block; /* Adjust display for proper alignment */
+}
+
+/* Adjusting post container margins for better layout */
+#posts_container {
+    margin-top: 20px;
+}
+
+/* Styles for the buttons inside the language_buttons container */
+.language_button {
+    display: inline-block; /* Add display for proper alignment */
+    /* Other styles remain the same */
+}
+
+/* Adjustments to make sure the layout fills the height properly */
+html, body {
+    height: 100%;
+}
+
+.stanga, .dreapta {
+    min-height: 100%;
+}
+
+/* Ensuring the right sidebar content is not hidden below the viewport */
+.dreapta {
+    overflow-y: auto; /* Allows scrolling on the right sidebar if content overflows */
 }
 
