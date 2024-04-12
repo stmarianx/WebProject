@@ -24,29 +24,53 @@
              <div class="bottom">
                 <input type ="text" class="title_in" placeholder="Document Title" name="titlu">
                 <input type ="text" class="title_in" id="t1" placeholder="Folder" name="folder">
-                <input type="number" class="numar" name="numar" min="0" max="90" placeholder="days">
-                <button class="buton" id="1" >Poste it</button> 
+                <input type="number" class="numar" name="numar" min="0" placeholder="days">
             </div>  
+            <div class="language_buttons_small">
+                <div class="limbaj" id="button1">
+                    <img src="../images/c++1.png" alt="C++">
+                </div>
+                <div class="limbaj" id="button2">
+                    <img src="../images/java.png" alt="Java">
+                </div>
+                <div class="limbaj" id="button3">
+                    <img src="../images/python.png" alt="Python">
+                </div>
+                <div class="limbaj" id="button4">
+                    <img src="../images/txt.png" alt="TXT">
+                </div>
+            </div>
             <div class="optiuni-avansate">
-                <h2>Opțiuni Avansate</h2>
+                <h2>Advanced options</h2>
                 <div class="optiuni-container">
                     <label class="container">Burn after read
                         <input type="checkbox">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">Password protected
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
+                        <input type="checkbox" id="passwordProtected" onchange="showPasswordModal()">
+                        <div id="passwordModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close" onclick="hidePasswordModal()">&times;</span>
+                                <h2 style="margin-left: auto;margin-right: auto; margin-top: 0;">Password Protection</h2>
+                                <label for="password">Password:</label>
+                                <input type="password" id="password">
+                                <label for="confirmPassword">Confirm Password:</label>
+                                <input type="password" id="confirmPassword" style="margin-bottom: 5px;">
+                                <button onclick="submitPassword()" style="background-color:#5E0A8C; color: aliceblue;">Submit</button>
+                            </div>
+                        </div>
                     </label>
                 </div>
             </div>
         
             <div class="selectare-utilizatori">
-                <h2>Permite Altora să Modifice Postarea</h2>
-                <input type="text" placeholder="Adaugă utilizator" class="input-utilizator">
-                <button class="buton" id="b1">Adaugă</button>
+                <h2>Add colaborators to your post</h2>
+                <input type="text" placeholder="Add user" class="input-utilizator">
+                <button class="buton" id="b1">Add</button>
                 <!-- Lista de utilizatori adăugați va apărea aici -->
             </div>
+            <button class="buton" id="but" >Poste it</button> 
         </div>
         <div class="language_buttons">
             <div class="limbaj" id="button1">
@@ -87,5 +111,35 @@
             <hr>     
         </div>
     </div>
+
+    <script>
+        function showPasswordModal() {
+            var modal = document.getElementById("passwordModal");
+            var checkbox = document.getElementById("passwordProtected");
+
+            if (checkbox.checked) {
+                modal.style.display = "block";
+            } else {
+                modal.style.display = "none";
+            }
+        }
+
+        function hidePasswordModal() {
+            var modal = document.getElementById("passwordModal");
+            modal.style.display = "none";
+        }
+
+        function submitPassword() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+            } else {
+                alert("Password was set");
+                hidePasswordModal(); 
+            }
+        }
+    </script>
 </body>
 </html>

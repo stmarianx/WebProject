@@ -222,7 +222,22 @@ hr{
    margin-top:auto;
     margin-bottom: auto;
 }
-
+.selectare-utilizatori {
+    margin: 20px 0;
+    color: #FFF;
+    margin-left: 7.5%;
+}
+.buton#b1
+{
+    margin-left: 0;
+    height: 30px;
+}
+.input-utilizator {
+    width: 90%; 
+    padding: 0 10px; 
+    margin-bottom: 10px;
+    height: 25px;
+}
 @media only screen and (max-width:82em)  
 {
     .titlu_postare:hover
@@ -264,7 +279,6 @@ hr{
     .menu_button#b_p{
        display: block;
     }
-
     .dreapta{
         display: none;
     }
