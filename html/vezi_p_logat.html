@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ComPaste | Anonim </title>
-    <link rel="stylesheet" href="../style/anonim.css">
+    <title>ComPaste | View Post </title>
+    <link rel="stylesheet" href="../style/vezi_logat.css">
 </head>
 <body>
     <div class="stanga">
@@ -12,34 +12,27 @@
         <div class="left-buttons">
             <a href="../index.html" class="menu_button">Main Page</a>
             <a href="../html/posts.html" class="menu_button" id="b_p">Posts</a>
+            <a href="../html/utilizator_logat.html" class="menu_button" >Create new post</a>
         </div>
         <div class="right-buttons">
-            <a href="../html/log.html" class="menu_button">Login</a>
-            <a href="../html/signup.html" class="menu_button">Sign up</a>
+            <a href="log.html" class="menu_button">Login</a>
+            <a href="signup.html" class="menu_button">Sign up</a>
         </div>
+     </div>
+     <div class="title_a">
+        <h1> Prima postare </h1>
+        <div class="info_postare">
+        <p class="date_postare"> &#128104; Gigel  &#128198;  12.02.2023  &#128190;  23kb  &#128187; c++</p>
+        <button class="buton" id="b1">History</button>
+    </div>
      </div>
      <div class="main_left">
         <div class="ll">
-            <textarea id="inputBox" placeholder="Your code here"></textarea>
+            <textarea id="inputBox" readonly rows="1">This a post made by one of our first users</textarea>
              <div class="bottom">
-                <input type ="text" class="title_in" placeholder="Document Title" name="titlu">
-                <input type="number" class="numar" name="numar" min="0" max="30" placeholder="days">
-                <button class="buton" id="1" >Poste it</button> 
+                <button class="buton" id="1" >Download</button>
+                <button class="buton" id="11" onclick="window.location.href='anonim.html'" >Edit post</button>
             </div>  
-        </div>
-        <div class="language_buttons">
-            <div class="limbaj" id="button1">
-                <img src="../images/c++1.png" alt="C++">
-            </div>
-            <div class="limbaj" id="button2">
-                <img src="../images/java.png" alt="Java">
-            </div>
-            <div class="limbaj" id="button3">
-                <img src="../images/python.png" alt="Python">
-            </div>
-            <div class="limbaj" id="button4">
-                <img src="../images/txt.png" alt="TXT">
-            </div>
         </div>
      </div>
     </div>
