@@ -9,13 +9,18 @@
 <body>
 <div class="account-module">
     <h1>Manage Your Account</h1>
-    <form>
-        <label for="username">Change Username:</label>
-        <input type="text" id="username" name="username" placeholder="New Username">
-        <label for="password">Change Password:</label>
-        <input type="password" id="password" name="password" placeholder="New Password">
-        <button type="button">Update</button>
+    <form id="updatePasswordForm">
+        <label for="newPassword">New Password:</label>
+        <input type="password" id="newPassword" name="newPassword" placeholder="New" required>
+
+        <label for="confirmNewPassword">Confirm New Password:</label>
+        <input type="password" id="confirmNewPassword" name="confirmNewPassword" placeholder="Confirm" required>
+
+        <button type="submit" id="updatePasswordButton">Update Password</button>
+
+        <div id="message"></div>
     </form>
+
 </div>
 </body>
 </html>

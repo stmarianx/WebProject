@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -10,10 +10,10 @@ body {
 }
 
 .account-module {
-    background: white;
+    background-color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 340px;
 }
 
@@ -21,6 +21,7 @@ body {
     font-size: 24px;
     color: #333;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .account-module form {
@@ -29,16 +30,17 @@ body {
 }
 
 .account-module label {
-    margin-bottom: 5px;
+    font-size: 16px;
     color: #666;
+    margin-bottom: 5px;
 }
 
-.account-module input[type="text"],
 .account-module input[type="password"] {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 14px;
 }
 
 .account-module button {
@@ -49,8 +51,17 @@ body {
     font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
+    margin-top: 10px;
+
+    transition: background-color 0.3s ease;
 }
 
 .account-module button:hover {
     background-color: #502075;
+}
+
+#message {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 16px;
 }
