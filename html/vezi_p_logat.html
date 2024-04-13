@@ -31,13 +31,18 @@
              <div class="bottom">
                 <button class="buton" id="1" >Download</button>
                 <button class="buton" id="11" onclick="window.location.href='anonim.html'" >Edit post</button>
+                <button class="buton" id="1" >Delete</button>
             </div>  
             <div class="selectare-utilizatori">
                 <h2>Add colaborators</h2>
                 <input type="text" placeholder="Add user" class="input-utilizator">
                 <button class="buton" id="b1">Add</button>
             </div>
-
+            <div class="doua_b">
+                <button class="buton" onclick="showPasswordModal()">Set Password</button>
+                <button class="buton">List of colaborators</button>
+                <button class="buton">Compile file</button>
+            </div>
         </div>
      </div>
     </div>
@@ -63,5 +68,39 @@
             <hr>     
         </div>
     </div>
+    <div id="passwordModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hidePasswordModal()">&times;</span>
+            <h2 style="margin-left: auto;margin-right: auto; margin-top: 0; color: aliceblue;">Password Protection</h2>
+            <label for="password" style="color: aliceblue;">Password:</label>
+            <input type="password" id="password">
+            <label for="confirmPassword" style="color: aliceblue;">Confirm Password:</label>
+            <input type="password" id="confirmPassword" style="margin-bottom: 5px;">
+            <button onclick="submitPassword()" style="background-color:#5E0A8C; color: aliceblue;">Submit</button>
+        </div>
+    </div>
+    <script>
+        function showPasswordModal() {
+            var modal = document.getElementById("passwordModal");
+            modal.style.display = "block";
+        }
+
+        function hidePasswordModal() {
+            var modal = document.getElementById("passwordModal");
+            modal.style.display = "none";
+        }
+
+        function submitPassword() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+            } else {
+                alert("Password was set");
+                hidePasswordModal(); 
+            }
+        }
+    </script>
 </body>
 </html>

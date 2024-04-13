@@ -38,8 +38,9 @@ body{
 .info_postare{
     display: flex;
     height: 40%;
+    margin-left: 7.5%;
     justify-content: space-between;
-    width: 93%;
+    width: 85.5%;
 }
 .buton#b1{
     width: 15%;
@@ -47,7 +48,6 @@ body{
 .date_postare
 {
     font-size: 15px;
-     margin-left:7.5%; 
      margin-top:1.5%;
     margin-bottom:auto;
     flex-direction: row;
@@ -96,7 +96,15 @@ body{
     width: 65%;
     height: 13px;
 }
-
+.doua_b{
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    width: 86%;
+    margin-bottom: 10px;
+    margin-left: 7.5%;
+    justify-content: space-between;
+}
 #searchButton {
     margin-left: 10px;
     height: 30px;
@@ -238,6 +246,45 @@ hr{
     margin-bottom: 10px;
     height: 25px;
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #2980B9;
+    margin: 15% auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    width: 28px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 @media only screen and (max-width:82em)  
 {
     .titlu_postare:hover
@@ -269,7 +316,7 @@ hr{
        margin-left: 0%;
     }
     .ll{
-        flex: 0 0 92%;
+        flex: 0 0 100%;
     }
     .titlu_postare{
         font-size: 11px;
@@ -306,5 +353,12 @@ hr{
     }
     .title_in{
         width: 48%;
+    }
+}
+@media only screen and (max-width:20em),  only screen and (orientation: portrait)
+{
+    .info_postare{
+        width: 91%;
+        margin-left: 4%;
     }
 }
