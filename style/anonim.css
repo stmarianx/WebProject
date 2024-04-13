@@ -173,7 +173,7 @@ hr{
     text-decoration: none;
     color:white;
     height: 80%;
-    width: 13%;
+    width: 15%;
     margin-top:auto;
     margin-bottom: auto;
     margin-left: 1.1%;
@@ -185,20 +185,20 @@ hr{
 .buton:hover{
     background-color: #2B0540;
 }
-
 .bottom
 {
     display: flex;
     flex-direction: row;
-    height: 8%;
-    width: 100%;
+    justify-content: space-between;
+    margin-left: 7.3%;
+    height: 8vh;
+    width: 85.5%;
 }
 
 .title_in{
     align-self: flex-start;
     height: 65%;
     width: 54%;
-    margin-left: 7.2%;
     margin-top:auto;
     margin-bottom: auto;
 }
@@ -232,16 +232,8 @@ hr{
     .dreapta{
         flex: 0 0 32%;
     }
-    .title_in{
-        width: 49%;
-        margin-left: 7%;
-    }
-    .numar{
-        width: 9%;
-    }
     .buton{
        width: 23%;
-       margin-left: 1.5%;
     }
     .limbaj img{
         width: 100%;

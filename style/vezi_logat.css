@@ -1,23 +1,33 @@
 body{
     background-color: #7F7F7F;
-    margin:0;
-    display: flex;
-}
-.stanga{
+     margin:0;
+     display: flex;
+ }
+ h1{
+    color: white;
+    font-size: 20px;
+    margin-left: 7.5%;
+ }
+ .stanga{
     flex: 0 0 75% ;
     display: flex;
     background-color: #000854;
     flex-direction: column;
-    height: 130vh;
-}
-.dreapta
+    height: 120vh;
+ }
+ .dreapta
 {
     flex: 0 0 25%;
     display: flex;
+    height: 120vh;
     background-color: #000533;
     flex-direction: column;
 }
+.title_a{
+    height: 10%;
+    min-height: 80px;
 
+}
 .title_dreapta{
     font-family: "Arial", sans-serif;
     color: whitesmoke;
@@ -25,14 +35,31 @@ body{
     margin-top: 10%;
     align-self: center;
 }
-.postare{
-    width: 100%;
-    height: 11%;
+.info_postare{
     display: flex;
-    flex-direction: column;
-    font-family: "Arial", sans-serif;
-    min-height: 60px;
-    max-height: 80px;
+    height: 40%;
+    margin-left: 7.5%;
+    justify-content: space-between;
+    width: 85.5%;
+}
+.buton#b1{
+    width: 15%;
+}
+.date_postare
+{
+    font-size: 15px;
+     margin-top:1.5%;
+    margin-bottom:auto;
+    flex-direction: row;
+    color:white;
+}
+.postare{
+     width: 100%;
+     height: 11%;
+     display: flex;
+     flex-direction: column;
+     font-family: "Arial", sans-serif;
+     min-height: 60px;
 }
 .info_suplimentar
 {
@@ -69,7 +96,15 @@ body{
     width: 65%;
     height: 13px;
 }
-
+.doua_b{
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    width: 86%;
+    margin-bottom: 10px;
+    margin-left: 7.5%;
+    justify-content: space-between;
+}
 #searchButton {
     margin-left: 10px;
     height: 30px;
@@ -93,20 +128,20 @@ hr{
 }
 .navbar{
     width: 100%;
-    height: 40px;
+    height: 7%;
     background-color:#0005339e;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 .left-buttons {
-    display: flex;
+    display: flex; 
     margin-left: 10px;
 }
 
 .right-buttons {
-    display: flex;
+    display: flex; 
     align-items: center;
 }
 .menu_button{
@@ -127,43 +162,24 @@ hr{
     width: 100%;
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    height: 100vh;    
 }
 .ll{
-    flex: 0 0 95%;
-    height: 120%;
+    flex: 0 0 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-}
-.language_buttons{
-    width: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 74%;
-}
-.language_buttons_small{
-    display: none;
-}
-.limbaj {
-    cursor: pointer;
-    display: flex;
-    margin: 2px;
-}
-.limbaj img{
-    width: 80%;
-    height: auto;
-    align-self: center;
 }
 
+
 #inputBox {
-    margin-top: 4%;
-    width: 85%;
-    height: 82%;
-    resize: none;
+    margin-top: 1%;
+    width: 85%; 
+    height: 65%; 
+    resize: none; 
     justify-self: center;
     align-self: center;
-    overflow-y: auto;
+    overflow-y: auto; 
     overflow-x: auto;
     font-size: 15px;
 }
@@ -174,11 +190,12 @@ hr{
     font-size: 3vh;
     text-decoration: none;
     color:white;
-    height: 80%;
-    width: 13%;
+    height: 90%;
+    width: 30%;
     margin-top:auto;
     margin-bottom: auto;
-    margin-left: 1.1%;
+    margin-left: 0.1%;
+    margin-right: 0.1%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,84 +209,44 @@ hr{
 {
     display: flex;
     flex-direction: row;
+    height: 8%;
+    margin-left: 7%;
     justify-content: space-between;
-    margin-left: 7.3%;
-    height: 10vh;
-    width: 85.5%;
+    width: 86%;
 }
 
 .title_in{
     align-self: flex-start;
     height: 65%;
-    width: 44%;
-    margin-left: 0;
+    width: 54%;
+    margin-left: 7.2%;
     margin-top:auto;
     margin-bottom: auto;
-}
-.title_in#t1{
-    width: 28%;
 }
 .numar{
-    width: 9.4%;
-    margin-left: 1%;
-    height: 65%;
-    margin-top:auto;
+   width: 15%;
+   margin-left: 1%;
+   height: 65%;
+   margin-top:auto;
     margin-bottom: auto;
-}
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none; 
-    margin: 0; 
-}
-.buton1
-{
-    background-color: #5E0A8C;
-    font-family: Arial, sans-serif;
-    margin:0;
-    font-size: 3vh;
-    text-decoration: none;
-    color:white;
-    height: 70%;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-.optiuni-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.container input[type="checkbox"] {
-    margin-right: 10px;
 }
 .selectare-utilizatori {
     margin: 20px 0;
     color: #FFF;
     margin-left: 7.5%;
 }
-.optiuni-avansate {
-    color: #FFF;
-    margin-left: 7.5%;
-    margin-top: 20px;
+.buton#b1
+{
+    margin-left: 0;
+    height: 30px;
 }
- .input-utilizator {
+.input-utilizator {
     width: 90%; 
     padding: 0 10px; 
     margin-bottom: 10px;
     height: 25px;
 }
-.buton#b1
-{
-    margin-left: 0;
-    height: 30%;
-}
-.buton#but{
-    min-height: 40px;
-    height: 10%;
-    align-self: center;
-}
+
 .modal {
     display: none;
     position: fixed;
@@ -308,11 +285,11 @@ input[type=number]::-webkit-outer-spin-button {
     text-decoration: none;
     cursor: pointer;
 }
-@media only screen and (max-width:82em)
+@media only screen and (max-width:82em)  
 {
     .titlu_postare:hover
     {
-        transform: scale(1.0);
+    transform: scale(1.0);
     }
     .titlu_postare{
         font-size: 13px;
@@ -320,91 +297,52 @@ input[type=number]::-webkit-outer-spin-button {
     .info_suplimentar{
         font-size: 8px;
     }
-    .language_buttons{
-        height: 70%;
-    }
-    .optiuni-avansate{
-        font-size: medium;
-    }
-    h2{
-        font-size: medium;
-    }
+
 }
-@media only screen and (max-width:65em)
+@media only screen and (max-width:65em) 
 {
-    .language_buttons{
-        display: none;
-    }
     .stanga{
         flex: 0 0 68% ;
-        height: 160vh;
     }
     .dreapta{
         flex: 0 0 32%;
     }
+    .title_in{
+        width: 49%;
+        margin-left: 7%;
+    }
     .buton{
-        width: 23%;
-        margin-left: 1.5%;
-        height: 93%;
+       width: 39%;
+       margin-left: 0%;
     }
     .ll{
-        flex: 0 0 99%;
-        height: 145%;
+        flex: 0 0 100%;
     }
     .titlu_postare{
         font-size: 11px;
     }
-    #inputBox{
-        margin-bottom: 5px;
-        height: 90%;
-    }
-    .language_buttons_small{
-        display: flex;
-        flex-direction: row;
-        height: 10%;
-        width: 87%;
-        justify-content: space-between;
-        margin-left: 7.5%;
-    }
-    .limbaj img{
-        margin-top: 0;
-        height: 50%;
-    }
-    .buton#b1{
-        height: 50px;
-    }
 }
-
-
 @media only screen and (max-width:49em),  only screen and (orientation: portrait)  {
     .menu_button#b_p{
-        display: block;
+       display: block;
     }
-
     .dreapta{
         display: none;
     }
     .stanga
     {
-        flex: 0 0 100%;
+         flex: 0 0 100%;
     }
     .main_left{
-        height: 98%;
-    }
-    .language_buttons
-    {
-     display: none;
-    }
-    .limbaj img{
-        margin-top: 0;
-        height: 50%;
+        flex-direction: column;
+        height: 89%;
     }
     .bottom{
         height: 8%;
     }
     .ll{
         width: 100%;
-        height: 100%;
+        height: 65%;
         margin-bottom: 0;
     }
     #inputBox{
@@ -413,17 +351,14 @@ input[type=number]::-webkit-outer-spin-button {
     .buton{
         font-size: 15px;
     }
-    .buton#but{
-        height: 5%;
-        font-size: x-large;
-    }
     .title_in{
         width: 48%;
     }
-    .optiuni-avansate{
-        font-size: larger;
-    }
-    h2{
-        font-size: larger;
+}
+@media only screen and (max-width:20em),  only screen and (orientation: portrait)
+{
+    .info_postare{
+        width: 91%;
+        margin-left: 4%;
     }
 }

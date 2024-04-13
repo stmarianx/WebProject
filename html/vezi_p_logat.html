@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComPaste | View Post </title>
+    <link rel="stylesheet" href="../style/vezi_logat.css">
+</head>
+<body>
+    <div class="stanga">
+     <div class="navbar">
+        <div class="left-buttons">
+            <a href="../index.html" class="menu_button">Main Page</a>
+            <a href="../html/posts.html" class="menu_button" id="b_p">Posts</a>
+            <a href="../html/utilizator_logat.html" class="menu_button" >Create new post</a>
+        </div>
+        <div class="right-buttons">
+            <a href="../index.html" class="menu_button">Log out</a>
+        </div>
+     </div>
+     <div class="title_a">
+        <h1> Prima postare </h1>
+        <div class="info_postare">
+        <p class="date_postare"> &#128104; Gigel  &#128198;  12.02.2023  &#128190;  23kb  &#128187; c++</p>
+        <button class="buton" id="b1">History</button>
+    </div>
+     </div>
+     <div class="main_left">
+        <div class="ll">
+            <textarea id="inputBox" readonly rows="1">This a post made by one of our first users</textarea>
+             <div class="bottom">
+                <button class="buton" id="1" >Download</button>
+                <button class="buton" id="11" onclick="window.location.href='anonim.html'" >Edit post</button>
+                <button class="buton" id="1" >Delete</button>
+            </div>  
+            <div class="selectare-utilizatori">
+                <h2>Add colaborators</h2>
+                <input type="text" placeholder="Add user" class="input-utilizator">
+                <button class="buton" id="b1">Add</button>
+            </div>
+            <div class="doua_b">
+                <button class="buton" onclick="showPasswordModal()">Set Password</button>
+                <button class="buton">List of colaborators</button>
+                <button class="buton">Compile file</button>
+            </div>
+        </div>
+     </div>
+    </div>
+    <div class="dreapta">
+        <h2 class="title_dreapta">Public Posts</h2>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button type="button" id="searchButton">Search</button>
+        </div>
+        <div class="postare">
+                <a href="view_p.html" class="titlu_postare">Prima postare</a>
+                <p class="info_suplimentar">Gigel | 12.02.2023 | 23kb | c++</p>
+                <hr>
+        </div>
+        <div class="postare">
+            <a href="view_p.html" class="titlu_postare">O postare cu un titlu ceva mai lung</a>
+                <p class="info_suplimentar">Gigel Andrei Becali | 12.02.2023 | 23kb | c++</p>
+                <hr>
+        </div>
+        <div class="postare">
+            <a href="#" class="titlu_postare">O postare cu un titlu ceva mai lung decat</a>
+            <p class="info_suplimentar">George Octavian Popescu  | 12.02.2023 | 23kb | c++</p>
+            <hr>     
+        </div>
+    </div>
+    <div id="passwordModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hidePasswordModal()">&times;</span>
+            <h2 style="margin-left: auto;margin-right: auto; margin-top: 0; color: aliceblue;">Password Protection</h2>
+            <label for="password" style="color: aliceblue;">Password:</label>
+            <input type="password" id="password">
+            <label for="confirmPassword" style="color: aliceblue;">Confirm Password:</label>
+            <input type="password" id="confirmPassword" style="margin-bottom: 5px;">
+            <button onclick="submitPassword()" style="background-color:#5E0A8C; color: aliceblue;">Submit</button>
+        </div>
+    </div>
+    <script>
+        function showPasswordModal() {
+            var modal = document.getElementById("passwordModal");
+            modal.style.display = "block";
+        }
+
+        function hidePasswordModal() {
+            var modal = document.getElementById("passwordModal");
+            modal.style.display = "none";
+        }
+
+        function submitPassword() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+            } else {
+                alert("Password was set");
+                hidePasswordModal(); 
+            }
+        }
+    </script>
+</body>
+</html>

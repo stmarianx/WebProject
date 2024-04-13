@@ -1,315 +1,425 @@
-/* autentificat.css */
-body {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
+body{
     background-color: #7F7F7F;
-    font-family: 'Arial', sans-serif;
+    margin:0;
+    display: flex;
+    overflow-x: hidden; /* preveni overflow-ul în body */
 }
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Layout Styles */
 .stanga {
     flex: 0 0 75%;
-    background-color: #000854;
-    padding: 20px;
-    min-height: 100vh;
-}
-
-.dreapta {
-    flex: 0 0 25%;
-    background-color: #000533;
-    padding: 20px;
-    min-height: 100vh;
-    color: white;
-}
-
-/* Navigation Bar Styles */
-.navbar {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    background-color: #000854;
+    flex-direction: column;
+    height: 100%; /* Înălțimea se adaptează la conținut */
+    overflow-x: hidden; /* Ascunde scroll-ul orizontal */
+    overflow-y: auto; /* Permite scroll-ul vertical dacă este necesar */
+}
+.dreapta
+{
+    flex: 0 0 25%;
+    display: flex;
+    height: 100vh;
+    background-color: #000533;
+    flex-direction: column;
 }
 
-.menu_button {
-    padding: 10px;
-    background-color: #2980B9;
-    color: white;
-    border: none;
-    margin-right: 5px;
-    cursor: pointer;
+.title_dreapta{
+    font-family: "Arial", sans-serif;
+    color: whitesmoke;
+    font-size: 4vh;
+    margin-top: 10%;
+    align-self: center;
 }
 
-.menu_button:hover {
-    background-color: #3498DB;
-}
-
-/* Post Creation Area Styles */
-.ll {
-    background-color: white;
-    padding: 20px;
-}
-
-#inputBox {
+.postare{
     width: 100%;
-    height: 150px;
-    margin-bottom: 10px;
+    height: 11%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Arial", sans-serif;
+    min-height: 60px;
 }
-
-.title_in, .numar {
-    width: calc(50% - 10px);
-    padding: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+.info_suplimentar
+{
+    font-size:10px;
+    margin-left: 15px;
+    align-self: flex-start;
+    color:#A8A8A8;
 }
-
-.buton {
-    padding: 10px 20px;
-    background-color: #8E44AD;
-    color: white;
-    border: none;
+.titlu_postare{
+    color:#fff;
+    font-size: 16px;
+    text-decoration: none;
     cursor: pointer;
+    align-self: center;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.titlu_postare:hover
+{
+    transform: scale(1.1);
+}
+.search-container {
+    margin: 20px;
+    display: flex;
+    align-items: center;
 }
 
-.buton:hover {
-    background-color: #9B59B6;
-}
-
-/* Language Button Styles */
-.language_button {
-    padding: 10px;
-    margin-right: 5px;
-    background-color: #3498DB;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.language_button:hover {
-    background-color: #5DADE2;
-}
-
-/* Right Section Styles */
-.title_dreapta {
-    margin-bottom: 20px;
-}
-
-.search-container input[type="text"] {
-    padding: 10px;
-    width: 70%;
-    margin-right: 10px;
+#searchInput {
+    padding: 6px;
+    border: 1px solid #ccc;
+    margin-left: 20px;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 65%;
+    height: 13px;
 }
 
 #searchButton {
-    padding: 10px 20px;
-    background-color: #27AE60;
-    color: white;
+    margin-left: 10px;
+    height: 30px;
     border: none;
+    background-color: #5E0A8C;
+    color: #fff;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 14px;
 }
 
 #searchButton:hover {
-    background-color: #2ECC71;
+    background-color:#2B0540;
 }
 
-/* Post Listing Styles */
-.postare {
-    background-color: #4E5D6C;
-    padding: 15px;
-    margin-bottom: 10px;
+hr{
+    border-color: #5E0A8C;
+    width: 90%;
+    border-width: 0.5px;
+    align-self: center;
 }
-
-.titlu_postare {
-    color: #82E0AA;
-    font-size: 1.2em;
-    margin-bottom: 5px;
-}
-
-.info_suplimentar {
-    font-size: 0.9em;
-    margin-top: 5px;
-}
-
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 10;
-    left: 0;
-    top: 0;
+.navbar{
     width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    height: 6%;
+    background-color:#0005339e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.modal_content {
-    background-color: #ECF0F1;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #999;
-    width: 40%;
+.left-buttons {
+    display: flex;
+    margin-left: 10px;
 }
 
-.close {
-    color: #333;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+.right-buttons {
+    display: flex;
+    align-items: center;
 }
-
-.close:hover,
-.close:focus {
-    color: black;
+.menu_button{
     text-decoration: none;
-    cursor: pointer;
+    margin-right: 20px;
+    color: #fff;
+    /*align-self:  center;*/
 }
 
-/* Additional Options Styles */
-.additional_option {
-    display: block;
-    margin: 10px 0;
+.menu_button#b_p{
+    display: none;
 }
-
-.additional_option input[type="checkbox"] {
-    margin-right: 5px;
+.menu_button:hover{
+    background-color:#5E0A8C;
 }
-
-/* Clearfix for floated elements */
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-
-/* Post Management Controls Styles */
-.post_management_controls {
-    background-color: #5D6D7E;
-    padding: 10px;
-    margin-top: 10px;
-}
-
-.edit_post, .delete_post {
-    padding: 5px 10px;
-    background-color: #2980B9;
-    color: white;
-    border: none;
-    margin-right: 5px;
-    cursor: pointer;
-}
-
-.edit_post:hover {
-    background-color: #3498DB;
-}
-
-.delete_post {
-    background-color: #C0392B;
-}
-
-.delete_post:hover {
-    background-color: #E74C3C;
-}
-
-.version_history {
-    padding: 5px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-/* Additional Option Styles */
-.additional_option label {
-    color: white;
-    display: inline-block;
-    margin-right: 15px;
-}
-
-.additional_option input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-/* Active Button Style */
-.buton1.active, .buton1:hover {
-    background-color: #8E44AD;
-    color: white;
-}
-
-/* Fix for the Buttons not floating properly */
-.left-buttons, .right-buttons {
-    display: inline-block;
-}
-
-/* Style for modal inputs and labels */
-.modal_content input[type="text"],
-.modal_content textarea {
+.main_left {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    display: block;
+    display: flex;
+    flex-direction: column; 
+    height: 75vh;
+    overflow: hidden; /* Ascunde overflow-ul pentru a evita scroll-ul nedorit */
+}
+.ll{
+    flex: 0 0 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.language_buttons{
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.modal_content label {
+.limbaj {
+    cursor: pointer;
+    display: flex;
+    margin: 2px;
+}
+.limbaj img{
+    width: 80%;
+    height: auto;
+    align-self: center;
+}
+
+#inputBox {
+    margin-top: 4%;
+    width: 85%;
+    height: 82%;
+    resize: none;
+    justify-self: center;
+    align-self: center;
+    overflow-y: auto;
+    overflow-x: auto;
+    font-size: 15px;
+}
+
+.buton{
+    background-color: #5E0A8C;
+    font-family: Arial, sans-serif;
+    font-size: 3vh;
+    text-decoration: none;
+    color:white;
+    height: 80%;
+    width: 13%;
+    margin-top:auto;
+    margin-bottom: auto;
+    margin-left: 1.1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.buton:hover{
+    background-color: #2B0540;
+}
+
+.bottom
+{
+    display: flex;
+    flex-direction: row;
+    height: 8%;
+    width: 100%;
+}
+
+.title_in{
+    align-self: flex-start;
+    height: 65%;
+    width: 54%;
+    margin-left: 7.2%;
+    margin-top:auto;
+    margin-bottom: auto;
+}
+.numar{
+    width: 15%;
+    margin-left: 1%;
+    height: 65%;
+    margin-top:auto;
+    margin-bottom: auto;
+}
+
+.choose{
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+}
+.buton1
+{
+    background-color: #5E0A8C;
+    font-family: Arial, sans-serif;
+    margin:0;
+    font-size: 3vh;
+    text-decoration: none;
+    color:white;
+    height: 80%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+@media only screen and (max-width:82em)
+{
+    .titlu_postare:hover
+    {
+        transform: scale(1.0);
+    }
+    .titlu_postare{
+        font-size: 13px;
+    }
+    .info_suplimentar{
+        font-size: 8px;
+    }
+
+}
+@media only screen and (max-width:65em)
+{
+    .stanga{
+        flex: 0 0 68% ;
+    }
+    .dreapta{
+        flex: 0 0 32%;
+    }
+    .title_in{
+        width: 49%;
+        margin-left: 7%;
+    }
+    .numar{
+        width: 9%;
+    }
+    .buton{
+        width: 23%;
+        margin-left: 1.5%;
+    }
+    .limbaj img{
+        width: 100%;
+    }
+    .ll{
+        flex: 0 0 92%;
+    }
+    .titlu_postare{
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width:49em),  only screen and (orientation: portrait)  {
+    .menu_button#b_p{
+        display: block;
+    }
+
+    .dreapta{
+        display: none;
+    }
+    .stanga
+    {
+        flex: 0 0 100%;
+    }
+    .main_left{
+        flex-direction: column;
+        height: 89%;
+    }
+    .language_buttons
+    {
+        flex-direction: row;
+        width: 100%;
+        height: 10%;
+        justify-content: space-around;
+    }
+    .limbaj img{
+        margin-top: 0;
+        height: 50%;
+    }
+    .bottom{
+        height: 8%;
+    }
+    .ll{
+        width: 100%;
+        height: 65%;
+        margin-bottom: 0;
+    }
+    #inputBox{
+        height: 90%;
+    }
+    .buton{
+        font-size: 15px;
+    }
+    .title_in{
+        width: 48%;
+    }
+}
+
+.gestiune-postari h2 {
+    margin-bottom: 15px;
+}
+
+.postari-container {
     margin-top: 10px;
 }
 
-/* Style for the Save Changes Button in Modal */
-.modal_content input[type="submit"] {
-    background-color: #27AE60;
-    color: white;
-    padding: 10px 20px;
+.postare {
+    position: relative; /* Adaugă poziție relativă pentru a poziționa butoanele absolut */
+    background-color: #00062E;
+    border-radius: 5px;
+    color: #FFF;
+    margin: 10px 0; 
+    padding: 10px; 
+}
+.postare {
+    padding-bottom: 20px; /* Spațiu pentru linia <hr> */
+    margin-bottom: 30px; /* Spațiu între postări */
+}
+
+
+.postare .postare-actiuni {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.postare .postare-actiuni .buton {
+    padding: 5px 10px; 
+    font-size: 0.8rem; 
+    margin: 0;
+    background-color: #5E0A8C;
+    color: #fff;
     border: none;
+    border-radius: 3px; 
     cursor: pointer;
-    display: inline-block;
-    margin: 10px 0;
+    max-width: 100px;
 }
-
-.modal_content input[type="submit"]:hover {
-    background-color: #2ECC71;
-}
-
-/* Adjustments to the Search and Filter Buttons */
-.choose {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.buton1 {
-    padding: 10px 20px;
-    background-color: #2980B9;
-    color: white;
+.postare hr {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 20px); 
     border: none;
+    height: 1px;
+    background-color: #5E0A8C; 
+    margin: 0;
+}
+
+.postare .postare-actiuni .buton {
+    max-width: calc(100% - 20px); 
+}
+
+.optiuni-avansate {
+    margin: 20px 0;
+    color: #FFF;
+}
+
+.optiuni-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container input[type="checkbox"] {
     margin-right: 10px;
-    cursor: pointer;
-    display: inline-block; /* Adjust display for proper alignment */
+}
+.selectare-utilizatori {
+    margin: 20px 0;
+    color: #FFF;
 }
 
-/* Adjusting post container margins for better layout */
-#posts_container {
-    margin-top: 20px;
+.input-utilizator {
+    padding: 5px;
+    margin: 10px 0;
+    width: calc(100% - 20px); 
+    border: 1px solid #AAA; 
+    border-radius: 5px;
 }
-
-/* Styles for the buttons inside the language_buttons container */
-.language_button {
-    display: inline-block; /* Add display for proper alignment */
-    /* Other styles remain the same */
+.istoric-modificari {
+    margin: 20px 0;
+    color: #FFF;
 }
-
-/* Adjustments to make sure the layout fills the height properly */
-html, body {
-    height: 100%;
+.ll, .language_buttons, .bottom, .input-utilizator, #inputBox, .buton {
+    max-width: 100%; 
+    box-sizing: border-box; 
 }
-
-.stanga, .dreapta {
-    min-height: 100%;
+#inputBox, .input-utilizator {
+    width: 100%; 
+    padding: 0 10px; 
 }
-
-/* Ensuring the right sidebar content is not hidden below the viewport */
-.dreapta {
-    overflow-y: auto; /* Allows scrolling on the right sidebar if content overflows */
+.ll, .main_left, .language_buttons, .postare, .postari-container {
+    padding: 0 10px; 
 }
 
