@@ -4,80 +4,86 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
 }
 
 .log_module{
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 340px; /* Ajustează conform design-ului tău */
     margin:auto;
-    margin-top: 10%;
-    justify-self: center;
-    align-items: center;
-    width: 50%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
+
+.titlu_app{
+    color: #5E0A8C;
+    font-size: 24px; /* Ajustează dimensiunea pentru a se potrivi cu designul tău */
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.logare {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%; /* Îl facem să se potrivească cu lățimea modulului de logare */
+}
+
 .buton{
     background-color: #5E0A8C;
-    font-family: Arial, sans-serif;
-    font-size: 4vh;
+    font-size: 16px; /* Ajustează dimensiunea fontului după preferințe */
     text-decoration: none;
-    color:white;
-    height: 15%;
-    width: 8em;
-    margin-left: 10%;
-    margin-right: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
+    width: auto; /* Ajustează lățimea butonului conform conținutului */
+    align-self: center; /* Centrăm butonul */
+    margin-top: 10px;
 }
+
 .buton:hover{
     background-color: #2B0540;
 }
-.titlu_app{
-    font-family: "Arial", sans-serif;
-    color: #5E0A8C;
-    font-size: 8vh;
-    margin-top: 0;
-    margin-bottom: 5%;
-}
-.logare
-{
-    justify-content: center;
-    align-self: center;
-    margin-bottom: 5%;
-    height: 25px;
-    width: 210px;
-    
-}
+
 [class^="deasupra"]{
-    display: none;
-    color:gray;
+    color: gray;
     font-size: smaller;
     margin: 0;
 }
-hr{
 
-    margin-top: 20px;
-    border-color:#2B0540;
+hr {
+    border-color: #2B0540;
     border-width: 1.5px;
-    width: 15em;
+    width: 100%; /* Se întinde pe toată lățimea modulului de logare */
+    margin-top: 20px;
 }
-.con{
+
+.con {
     width: 25px;
     height: 25px;
     margin-left: 3px;
 }
-@media only screen and (max-width:57em)  /*pentru tablete*/ 
+
+/* Încorporează stilul pentru media queries existent */
+@media only screen and (max-width: 57em) /*pentru tablete*/
 {
-    .titlu_app
-    {
-        margin-top: 10%;
-    }
     .titlu_app{
         margin-bottom: 20px;
     }
     .logare{
         margin-bottom: 30px;
     }
-
+    .log_module{
+        width: 80%; /* O lățime mai mare pentru a se adapta la ecranul tabletelor */
+        margin-top: 10%;
+    }
 }

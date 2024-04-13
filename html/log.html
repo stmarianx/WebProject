@@ -3,44 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/log.css">
     <title>ComPaste | Login</title>
+    <link rel="stylesheet" href="../style/log.css">
 </head>
 <body>
 <div class="log_module">
     <p class="titlu_app">ComPaste</p>
-    <p class="deasupra1">Username</p>
-    <input type ="text" class="logare" placeholder="Your username" name="username"  oninput=fct1()>
-    <p class="deasupra2">Password</p>
-    <input type="password" class="logare" placeholder="Your password" name="password" oninput="fct2()">
-    <a href="utilizator_logat.html" class="buton">Log in</a>
+    <label for="username" class="deasupra1">Username:</label>
+    <input type="text" id="username" class="logare" placeholder="Enter your username" oninput="fct1()" >
+
+    <label for="password" class="deasupra2">Password:</label>
+    <input type="password" id="password" class="logare" placeholder="Enter your password" oninput="fct2()" >
+
+    <div class="buton" onclick="location.href='utilizator_logat.html'">Log in</div>
     <hr>
-    <p style="color: black;">Continue with Google </p>
-    <a href="#">
-        <img class="con" src="../images/google.jpg" alt="connect with google" >
-    </a>
+    <div id="loginHelp">
+        <a href="#">Forgot your password?</a>
+        <a href="signup.html">Sign up</a>
+    </div>
 </div>
 
-
-
 <script>
- function fct1()
- {
-    var usernameInput = document.querySelector('input[name="username"]');
-    document.querySelector(".deasupra1").style.display="block";
-    if (usernameInput.value==="")
-    document.querySelector(".deasupra1").style.display="none";
+    document.addEventListener('DOMContentLoaded', function() {
+        fct1();
+        fct2();
+    });
 
- }
- function fct2()
- {
-    var usernameInput = document.querySelector('input[name="password"]');
-    document.querySelector(".deasupra2").style.display="block";
-    if (usernameInput.value==="")
-    document.querySelector(".deasupra2").style.display="none";
+    function fct1() {
+        var usernameInput = document.getElementById('username');
+        var label = document.querySelector('.deasupra1');
+        label.style.display = usernameInput.value ? "block" : "none";
+    }
 
- }
+    function fct2() {
+        var passwordInput = document.getElementById('password');
+        var label = document.querySelector('.deasupra2');
+        label.style.display = passwordInput.value ? "block" : "none";
+    }
 </script>
-
 </body>
 </html>
