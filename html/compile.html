@@ -7,30 +7,44 @@
     <link rel="stylesheet" href="../style/compile_page.css">
 </head>
 <body>
-<div class="compiler-container">
-    <h1>Code Compiler</h1>
+    <div class="stanga">
+        <div class="navbar">
+           <div class="left-buttons">
+               <a href="../index.html" class="menu_button">Main Page</a>
+               <a href="../html/vezi_pp.html" class="menu_button" id="b_p">Your Post</a>
+           </div>
+           <div class="right-buttons">
+               <a href="../index.html" class="menu_button">Log out</a>
+           </div>
+        </div>
+        <div class="main_left">
+    <div class="compiler-container">
+    <h1 href="vezi_p_logat.html">Titlu Postare</h1>
+    <div id="outputContainer" style="font-size: medium; margin-bottom: 10px;">
+        <a style="color: aliceblue; font-size: large; text-decoration: none;" href="vezi_p_logat.html"> Your Post:</a>
+        <textarea id="outputArea" readonly></textarea>
+    </div>
     <form id="compileForm">
         <label for="fileUpload">Select files for input:</label>
-        <input type="file" id="fileUpload" multiple>
-        <label for="languageSelect">Select Language:</label>
-        <select id="languageSelect">
-            <option value="c++">C++</option>
-            <option value="java">Java</option>
-            <option value="python">Python</option>
-            <!-- Adaugă alte limbaje -->
-        </select>
+        <input style="color: aliceblue;" type="file" id="fileUpload" multiple>
+        <br>
         <button type="button" id="compileButton">Compile</button>
     </form>
     <div id="outputContainer">
         <h2>Output:</h2>
         <textarea id="outputArea" readonly></textarea>
     </div>
-    <div id="errorContainer">
-        <h2>Errors:</h2>
-        <textarea id="errorArea" readonly></textarea>
+</div>
+</div>
+</div>
+<div class="dreapta">
+    <div class="titlu_app">ComPaste</div>
+    <div class="instructions">
+        <h2>Some Tips</h2>
+        <p>1.Here you can compile your post only if you have specified the programming language corectly : )</p>
+        <p>2. If you press on your post you will be redirected to your post to make some modifications, if you really want this.</p>
     </div>
 </div>
-<!-- Aici ar merge scripturile necesare pentru logica de compilare -->
 <script src="scripts/compiler_logic.js"></script>
 </body>
 </html>

@@ -62,15 +62,6 @@ th:nth-child(2),
 td:nth-child(2) {
     width: 60%; 
 }
-
-
-hr{
-
-    margin-top: 20px;
-    border-color:#2B0540;
-    border-width: 1.5px;
-    width: 15em;
-}
 .con{
     width: 25px;
     height: 25px;
