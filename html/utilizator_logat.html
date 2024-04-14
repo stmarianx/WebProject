@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ComPaste | Posts </title>
     <link rel="stylesheet" href="../style/logat.css">
+    <!-- Include CodeMirror CSS -->
+    <link rel="stylesheet" href="../codemirror/lib/codemirror.css">
+
 </head>
 <body>
     <div class="stanga">
@@ -111,6 +114,34 @@
             <hr>     
         </div>
     </div>
+
+
+    <!-- Scripturile CodeMirror -->
+    <script src="../codemirror/lib/codemirror.js"></script>
+    <script src="../codemirror/mode/javascript/javascript.js"></script>
+    <script src="../codemirror/mode/clike/clike.js"></script>
+    <script src="../codemirror/mode/python/python.js"></script>
+    <script src="../codemirror/mode/plain-text/plain-text.js"></script>
+
+    <!-- Inițializarea CodeMirror -->
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById('inputBox'), {
+            lineNumbers: true,
+            mode: 'text/x-csrc',  // Setează modul implicit la C/C++ (poate fi schimbat dinamic)
+            theme: 'monokai'
+        });
+
+        // Funcție pentru schimbarea limbajului în editor
+        function changeLanguage(language) {
+            editor.setOption("mode", language);
+        }
+
+        // Event listeners pentru butoanele de limbaj
+        document.getElementById('button1').addEventListener('click', function() { changeLanguage('text/x-csrc'); });  // C/C++
+        document.getElementById('button2').addEventListener('click', function() { changeLanguage('text/x-java'); });  // Java
+        document.getElementById('button3').addEventListener('click', function() { changeLanguage('python'); });  // Python
+        document.getElementById('button4').addEventListener('click', function() { changeLanguage('plain-text'); });  // Plain Text
+    </script>
 
     <script>
         function showPasswordModal() {
