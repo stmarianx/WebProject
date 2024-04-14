@@ -15,6 +15,8 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 340px;
+    display: flex;
+    flex-direction: column;
 }
 
 .account-module h1 {
@@ -25,8 +27,7 @@ body {
 }
 
 .account-module form {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
 }
 
 .account-module label {
@@ -35,12 +36,15 @@ body {
     margin-bottom: 5px;
 }
 
+.account-module input[type="text"],
+.account-module input[type="email"],
 .account-module input[type="password"] {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 14px;
+    width: 100%;
 }
 
 .account-module button {
@@ -52,13 +56,82 @@ body {
     border-radius: 4px;
     cursor: pointer;
     margin-top: 10px;
-
+    width: auto;  /* Butonul să nu fie pe toată lățimea */
     transition: background-color 0.3s ease;
 }
 
 .account-module button:hover {
     background-color: #502075;
 }
+
+.input-like {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+    cursor: pointer;
+    position: relative;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow-down {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #333;
+}
+
+#passwordForm {
+    width: 100%;
+    display: none;
+}
+
+/* Când formularul este vizibil, săgeata indică în sus */
+.input-like.active .arrow-down {
+    border-top: none;
+    border-bottom: 5px solid #333;
+}
+
+#updatePasswordButton {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#updatePasswordButton:hover {
+    background-color: #45a049;
+}
+
+#saveChangesButton {
+    background-color: #5E0A8C;
+    color: white;
+    padding: 10px 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+#saveChangesButton:hover {
+    background-color: #502075;
+}
+
 
 #message {
     margin-top: 15px;

@@ -9,18 +9,48 @@
 <body>
 <div class="account-module">
     <h1>Manage Your Account</h1>
-    <form id="updatePasswordForm">
-        <label for="newPassword">New Password:</label>
-        <input type="password" id="newPassword" name="newPassword" placeholder="New" required>
 
-        <label for="confirmNewPassword">Confirm New Password:</label>
-        <input type="password" id="confirmNewPassword" name="confirmNewPassword" placeholder="Confirm" required>
+    <form id="editProfileForm">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
 
-        <button type="submit" id="updatePasswordButton">Update Password</button>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
 
-        <div id="message"></div>
+
     </form>
 
+    <div id="changePasswordTrigger" class="input-like" onclick="togglePasswordForm()">
+        Change Password
+        <span class="arrow-down"></span>
+    </div>
+    <div id="passwordForm" style="display:none;">
+        <form id="updatePasswordForm">
+            <label for="newPassword">New Password:</label>
+            <input type="password" id="newPassword" name="newPassword" placeholder="New Password" required>
+
+            <label for="confirmNewPassword">Confirm New Password:</label>
+            <input type="password" id="confirmNewPassword" name="confirmNewPassword" placeholder="Confirm Password" required>
+
+            <button type="submit" id="updatePasswordButton">Update Password</button>
+        </form>
+    </div>
+
+    <button type="submit" id="saveChangesButton">Save Changes</button>
+
+    <div id="message"></div>
 </div>
+
+<script>
+    function togglePasswordForm() {
+        var passwordForm = document.getElementById('passwordForm');
+        var trigger = document.getElementById('changePasswordTrigger');
+        var isDisplayed = passwordForm.style.display === 'block';
+
+        passwordForm.style.display = isDisplayed ? 'none' : 'block';
+        trigger.classList.toggle('active'); // Pentru a roti săgeata în sus/jos
+    }
+
+</script>
 </body>
 </html>
