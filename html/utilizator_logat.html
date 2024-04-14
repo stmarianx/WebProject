@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../style/logat.css">
     <!-- Include CodeMirror CSS -->
     <link rel="stylesheet" href="../codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="../codemirror/lib/monokai.css">
 
 </head>
 <body>
@@ -123,24 +124,35 @@
     <script src="../codemirror/mode/python/python.js"></script>
     <script src="../codemirror/mode/plain-text/plain-text.js"></script>
 
-    <!-- Inițializarea CodeMirror -->
+
     <script>
         var editor = CodeMirror.fromTextArea(document.getElementById('inputBox'), {
             lineNumbers: true,
-            mode: 'text/x-csrc',  // Setează modul implicit la C/C++ (poate fi schimbat dinamic)
-            theme: 'monokai'
+            mode: 'text/x-csrc',  // Setează modul implicit
+
         });
 
-        // Funcție pentru schimbarea limbajului în editor
         function changeLanguage(language) {
+            console.log("Changing language to:", language);
             editor.setOption("mode", language);
         }
 
-        // Event listeners pentru butoanele de limbaj
-        document.getElementById('button1').addEventListener('click', function() { changeLanguage('text/x-csrc'); });  // C/C++
-        document.getElementById('button2').addEventListener('click', function() { changeLanguage('text/x-java'); });  // Java
-        document.getElementById('button3').addEventListener('click', function() { changeLanguage('python'); });  // Python
-        document.getElementById('button4').addEventListener('click', function() { changeLanguage('plain-text'); });  // Plain Text
+        // Event listeners
+        document.querySelectorAll('.limbaj').forEach(function(button) {
+            button.addEventListener('click', function() {
+
+                var languageId = this.id;
+                var language;
+                switch (languageId) {
+                    case 'button1': language = 'text/x-csrc'; break;  // C/C++
+                    case 'button2': language = 'text/x-java'; break;  // Java
+                    case 'button3': language = 'python'; break;       // Python
+                    case 'button4': language = 'plain-text'; break;   // Plain Text
+                    default: return;
+                }
+                changeLanguage(language);
+            });
+        });
     </script>
 
     <script>
