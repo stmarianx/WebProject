@@ -67,11 +67,10 @@ label, input, select, button {
 }
 
 #outputArea,
-#errorArea {
+#postArea {
     width: 100%;
     height: 150px;
     margin-top: 10px;
-    padding: 10px;
     margin-bottom: 10px;
     border-radius: 4px;
     border: 1px solid #ddd;
@@ -107,4 +106,32 @@ label, input, select, button {
     font-family: "Arial", sans-serif;
     color: #870EC9;
     font-size: 8vh;
+}
+@media only screen and (max-width:72em)  
+{
+  .titlu_app{
+   font-size: 6vh;
+  }
+  .instructions{
+    font-size: large;
+  }
+}
+@media only screen and (max-width:53em)  
+{
+    .titlu_app{
+        font-size: 5vh;
+       }
+       .instructions{
+         font-size: medium;
+       }
+}
+
+@media only screen and (max-width:44em),  only screen and (orientation: portrait)   /*pentru telefoane*/
+{
+    .stanga{
+        flex: 0 0 100%;
+    }
+    .dreapta{
+        display: none;
+    }
 }

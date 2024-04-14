@@ -27,8 +27,8 @@ body,html{
     font-family: "Arial", sans-serif;
     color: whitesmoke;
     font-size: 8vh;
-    margin-top: 20%;
     align-self: center;
+    margin-top: 1%;
 }
 .buton{
     background-color: #5E0A8C;
@@ -68,7 +68,13 @@ body,html{
     color: #870EC9;
     font-size: 5vh;
 }
-
+.content{
+    height: 90%;
+    margin-top: 20%;
+    margin-bottom: auto;
+    display: flex;
+    flex-direction: column;
+}
 @media only screen and (max-width:57em)  
 {
     .info#info-1
@@ -92,5 +98,11 @@ body,html{
         margin-left: auto;
         margin-right: auto;
         margin-top: 0;
+    }
+    .content{
+        margin-top: auto;
+    }
+    .titlu_app#t1{
+        margin-top: auto;
     }
 }
