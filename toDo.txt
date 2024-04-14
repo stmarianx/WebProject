@@ -1,3 +1,2 @@
-creare pagina pentru Forgot your password
 de facut pagina compilat
 sintax highlighting codeMirror

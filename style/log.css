@@ -87,3 +87,11 @@ hr {
         margin-top: 10%;
     }
 }
+/* forgot password page */
+#confirmationMessage {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: green;
+}
+
