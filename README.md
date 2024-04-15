@@ -1,5 +1,3 @@
-Trebuie adaugat am uitat parola la logare.
-De făcut design pentru utilizatorii autentificati
 
 
 ATENTIE!!!!!! 

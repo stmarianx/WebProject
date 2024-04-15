@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -158,10 +158,20 @@
             <section>
                 <h4 aria-level="3">3.1.5 Pagina de vizualizare a structurii postărilor proprii</h4>
                 <p>
-                   a
+                   Această pagină va deschide implicit folderul principal (main) și va afișa conținutul acestuia. Acesta va fi singurul
+                   folder care nu va putea fi șters (deci butonul care apare acum în interfață nu va apărea pentru folderul main, dar va 
+                   fi prezent pentru toate celelalte foldere). Pentru fiecare element al folderului va fi disponibil un buton de delete.
+                   Totodată, pentru fiecare postare va putea fi vizualizată perioada de timp în care aceasta va fi disponibilă.
                 </p>
                 <p>
-                    b
+                    În partea dreaptă a paginii este prezentă o zonă în care sunt afișsate statistici ale utilizatorului curent și 
+                    un buton de edit profile care îi va permite să își schimbe parola.
+                </p>
+            </section>
+            <section>
+                <h4 aria-level="3">3.1.6. Paginile de logare, signup și schimbare parolă </h4>
+                <p>Aceste paginin au un design similar în simplitate. Astfel, utilizatorul nu va avea nicio dificultate în
+                    a realiza activitatea propusă când va accesa aceste pagini.
                 </p>
             </section>
         </section>
@@ -173,11 +183,51 @@
                 de culoare în cadrul tuturor paginilor în care acestea aapar. Culoarea albă a fontului oferă o vizibilitate excelentăm
                  iar mărimea lui este aleasă astfel încât să nu fie problematică descifrarea conșinutului scris.
             </p>
+            <p>Totodată, zonele cu albastru deschis (precum fonddul cercului cu inițialele profilului sau fondul ferestrei popup pentru 
+                setare parolă) dau un plus de vivacitate paginii contribuind la senzația de liniște pe care o dă combinația cromatică aleasă.</p>
         </section>
     </section>
-
     <section>
-            <h2 aria-level="2">4. Alte observații</h2>
+        <h2 aria-level="3">4. Opțiuni suplimentare </h2>
+        <section>
+            <h4 aria-level="3">4.1 Burn after read </h4>
+            <p> O dată activată această opțiune, postarea va putea fi vizualizată o singură dată de către un utilizator (altul decât autorul
+                postării). Practic, după ce el vizualizează conținutul postării nu va putea să o găsească oentru a o vizualiza încă o dată.
+            </p>
+        </section>
+        <section>
+            <h4 aria-level="3">4.2 Password protected </h4>
+            <p>
+            În momentul în care cineva va dori să acceseze o postare care este protejată cu o parola, se va afișa o fereastră 
+            similară celei făcute pentru a adăuga o parolă în care va trebui să introducă parola postării, în cazul în ccare nu o introduce
+            el nu va putea vizualiza postarea.
+            </p>
+        </section>
+        <section>
+            <h4 aria-level="3">4.3 Adăugare contributor </h4>
+            <p>
+               Acest lucur va face ca fișierul  la care ești adăugat drep contributor să apară între postările personale
+               într-un nou folder care va fi creat automat. Astfel, clientul care a fost selectat pentru a contribui la o anumită
+               postare va putea să editeze postarea deși nu el este autorul ei.
+            </p>
+            <p>
+                Lista contributorilor unei postări (dacă aceștia există) va apărea imediat sub zona în care ceștia pot fi aleși( la momentul
+                scrierii postării), iar apoi va fi un buton dedicat în zona de vizualizare postare (versiunea pentru utilizatorul logat).
+                O dată intrat în această secțiune ( prin apăsarea butonului mai sus menționat), utilizatorul va putea să elimine unii utilizatori 
+                sau să adauge alții noi.
+            </p>
+        </section>
+        <section>
+            <h4 aria-level="3">4.4 Istoric </h4>
+            <p>
+                Prin intermediul acestei caracteristici speciale, utilizatorul logat va putea să revină la o versiune anterioară a postării.
+                Acest lucru poate fi util dacă o modificare adusă fișierului nu a funcționat corect și se vrea revenirea la versiunea veche.
+            </p>
+
+        </section>
+    </section>
+    <section>
+            <h2 aria-level="2">5. Alte observații</h2>
             <p>
                 Merită amintit faptul că aplicația are un design adaptabil în funcție de dispozitiva, clienții avînd opțiunea de a o 
                 folosi pe laptop, tabletă sau smartphone, fără ca trecerea pe un alt tip de dispozitiv să altereze funcționalitățile genereale
@@ -188,6 +238,14 @@
                 aceste cerințe și de alte aplicații web dintre care amintim Pastebin și Pbinfo.
              </p>
     </section>
+    <section>
+        <h2 aria-level="2">6. Îmbunătățiri viitoare</h2>
+          <p> Pe viitor ne propunem creearea unei zone de notificări pentru utilizatorul logat. Această zonă poate fi utilă 
+            în mai multe scenarii de utilizare. Un prim astfel de scenariu este acela în care sunt adăugat drept colaborator la o postare.
+            În acest caz voi primi o notificare, iar eu voi putea accepta sau nu să devin colaborator. Tot în zona de notificări voi putea fi 
+            notificat că durata de viață a  unei postări se apropie de final și pot să iau ce măsur vreau pe mai departe.
+          </p>
+</section>
     </article>
 </body>
 </html>

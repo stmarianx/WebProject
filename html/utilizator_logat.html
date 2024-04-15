@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ComPaste | Posts </title>
-    <link rel="stylesheet" href="../style/logat.css">
     <!-- Include CodeMirror CSS -->
     <link rel="stylesheet" href="../codemirror/lib/codemirror.css">
     <link rel="stylesheet" href="../codemirror/lib/monokai.css">
+    <link rel="stylesheet" href="../style/logat.css">
 
 </head>
 <body>
@@ -19,7 +19,7 @@
             <a href="../html/vezi_pp.html" class="menu_button">Your Posts</a>
         </div>
         <div class="right-buttons">
-            <a href="log.html" class="menu_button">Log out</a>
+            <a href="../index.html" class="menu_button">Log out</a>
         </div>
      </div>
      <div class="main_left">
@@ -128,8 +128,8 @@
     <script>
         var editor = CodeMirror.fromTextArea(document.getElementById('inputBox'), {
             lineNumbers: true,
-            mode: 'text/x-csrc',  // Setează modul implicit
-
+            mode: 'text/x-csrc',  
+            with: '85%'
         });
 
         function changeLanguage(language) {

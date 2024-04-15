@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ComPaste | Anonim </title>
+    <link rel="stylesheet" href="../codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="../codemirror/lib/monokai.css">
     <link rel="stylesheet" href="../style/anonim.css">
 </head>
 <body>
@@ -65,5 +67,72 @@
             <hr>     
         </div>
     </div>
+
+    <script src="../codemirror/lib/codemirror.js"></script>
+    <script src="../codemirror/mode/javascript/javascript.js"></script>
+    <script src="../codemirror/mode/clike/clike.js"></script>
+    <script src="../codemirror/mode/python/python.js"></script>
+    <script src="../codemirror/mode/plain-text/plain-text.js"></script>
+
+
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById('inputBox'), {
+            lineNumbers: true,
+            mode: 'text/x-csrc',  
+            with: '85%'
+        });
+
+        function changeLanguage(language) {
+            console.log("Changing language to:", language);
+            editor.setOption("mode", language);
+        }
+
+        // Event listeners
+        document.querySelectorAll('.limbaj').forEach(function(button) {
+            button.addEventListener('click', function() {
+
+                var languageId = this.id;
+                var language;
+                switch (languageId) {
+                    case 'button1': language = 'text/x-csrc'; break;  // C/C++
+                    case 'button2': language = 'text/x-java'; break;  // Java
+                    case 'button3': language = 'python'; break;       // Python
+                    case 'button4': language = 'plain-text'; break;   // Plain Text
+                    default: return;
+                }
+                changeLanguage(language);
+            });
+        });
+    </script>
+
+    <script>
+        function showPasswordModal() {
+            var modal = document.getElementById("passwordModal");
+            var checkbox = document.getElementById("passwordProtected");
+
+            if (checkbox.checked) {
+                modal.style.display = "block";
+            } else {
+                modal.style.display = "none";
+            }
+        }
+
+        function hidePasswordModal() {
+            var modal = document.getElementById("passwordModal");
+            modal.style.display = "none";
+        }
+
+        function submitPassword() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+            } else {
+                alert("Password was set");
+                hidePasswordModal(); 
+            }
+        }
+    </script>
 </body>
 </html>

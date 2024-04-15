@@ -1,4 +1,10 @@
-/* logat.css, original layout */
+@import "../codemirror/lib/codemirror.css";
+
+.CodeMirror{
+    height: 70vh;
+    margin-top: 4%;
+    width: 85%;
+}
 body{
     background-color: #7F7F7F;
     margin:0;
@@ -373,7 +379,11 @@ input[type=number]::-webkit-outer-spin-button {
         height: 50%;
     }
     .buton#b1{
-        height: 50px;
+        height: 40px;
+    }
+    .buton#but{
+        height: 7%;
+        font-size: x-large;
     }
 }
 
@@ -402,7 +412,7 @@ input[type=number]::-webkit-outer-spin-button {
         height: 50%;
     }
     .bottom{
-        height: 8%;
+        height: 5%;
     }
     .ll{
         width: 100%;
@@ -416,8 +426,11 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 15px;
     }
     .buton#but{
-        height: 5%;
-        font-size: x-large;
+        height: 4%;
+        font-size: large;
+    }
+    .buton#b1{
+        height: 25%;
     }
     .title_in{
         width: 48%;
