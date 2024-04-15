@@ -1,0 +1,17 @@
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello, world!" << endl;
+    return 0;
+}
+def greet():
+    print("Hello, world!")
+
+if __name__ == "__main__":
+    greet()
