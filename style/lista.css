@@ -84,24 +84,20 @@ body{
     font-size: 3vh;
     text-decoration: none;
     color:white;
-    margin-bottom: 2%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-}
-.buton:hover{
-    background-color: #2B0540;
-}
-.buton#del
-{
     margin-top: 10px;
     height: 60%;
     width: 15%;
     margin-bottom: 12px;
     margin-right: 2%;
+}
+.buton:hover{
+    background-color: #2B0540;
 }
 .selectare-utilizatori {
     margin: 20px 0;

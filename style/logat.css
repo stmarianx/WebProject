@@ -274,7 +274,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .buton#but{
     min-height: 40px;
-    height: 10%;
+    height: 6%;
     align-self: center;
 }
 .modal {
@@ -378,11 +378,14 @@ input[type=number]::-webkit-outer-spin-button {
         margin-top: 0;
         height: 50%;
     }
+
     .buton#b1{
         height: 40px;
+        width: 10%;
     }
     .buton#but{
-        height: 7%;
+        height: 5%;
+        min-height: 30px;
         font-size: x-large;
     }
 }
@@ -399,6 +402,7 @@ input[type=number]::-webkit-outer-spin-button {
     .stanga
     {
         flex: 0 0 100%;
+        height: auto;
     }
     .main_left{
         height: 98%;

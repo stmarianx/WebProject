@@ -1,5 +1,5 @@
 :root {
-    --circle-size: 32vh; 
+    --circle-size: 35vh; 
     --margin_circle: 17vh
 }
 body{
@@ -98,7 +98,7 @@ body{
 .buton:hover{
     background-color: #2B0540;
 }
-.buton#del
+.buton.del
 {
     margin-top: 10px;
     height: 60%;
@@ -106,7 +106,7 @@ body{
     margin-bottom: 12px;
     margin-right: 2%;
 }
-.buton#del2{
+.buton#mdel{
     margin-left: 9%;
     margin-top: 4%;
 }
@@ -216,12 +216,15 @@ table{
 
 @media only screen and (max-width:60em)
 {
-   .buton#del{
-    width: 20%;
+   .buton.del{
+    width: 25%;
    }
    .main_left{
     width: 85%;
     margin-left: 7.5%;
+   }
+   .avatar{
+    font-size: 90px;
    }
 }
 

@@ -240,6 +240,11 @@ hr{
     margin-left: 0;
     height: 30px;
 }
+.buton#b122{
+    margin-left: 0;
+    height: 30px;
+    width: 20%;
+}
 .input-utilizator {
     width: 90%; 
     padding: 0 10px; 
