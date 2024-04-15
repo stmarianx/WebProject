@@ -369,12 +369,14 @@ input[type=number]::-webkit-outer-spin-button {
     .language_buttons_small{
         display: flex;
         flex-direction: row;
-        height: 10%;
-        width: 87%;
         justify-content: space-between;
-        margin-left: 7.5%;
+        height: auto;
+        width: 85%;
+        margin-left: 7.5%; /* elimină marginile stânga pentru a utiliza întreaga lățime */
     }
-    .limbaj img{
+
+    .limbaj img {
+
         margin-top: 0;
         height: 50%;
     }
