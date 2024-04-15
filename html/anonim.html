@@ -6,6 +6,7 @@
     <title>ComPaste | Anonim </title>
     <link rel="stylesheet" href="../codemirror/lib/codemirror.css">
     <link rel="stylesheet" href="../codemirror/lib/monokai.css">
+    <link rel="stylesheet" href="../codemirror/lib/dracula.css">
     <link rel="stylesheet" href="../style/anonim.css">
 </head>
 <body>
@@ -78,7 +79,8 @@
         var editor = CodeMirror.fromTextArea(document.getElementById('inputBox'), {
             lineNumbers: true,
             mode: 'text/x-csrc',  
-            with: '85%'
+            with: '85%',
+            theme: 'monokai'
         });
 
         function changeLanguage(language) {
