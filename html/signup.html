@@ -9,31 +9,29 @@
 </head>
 
 <body>
-    <div class="sign_module">
-        <p class="titlu_app">ComPaste</p>
-        <table>
-            <tr>
-                <td>Username</td>
-                <td><input type="text" placeholder="Your username" name="username"></td>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td><input type="email" placeholder="Your email" name="email"></td>
-            </tr>
-            <tr>
-                <td>Set your password</td>
-                <td> <input type="password" placeholder="Your password" name="password"></td>
-            </tr>
-            <tr>
-                <td>Confirm password</td>
-                <td><input type="password" placeholder="Confirm password" name="c_password"></td>
-            </tr>
-        </table>
-        <button type="submit" class="buton">Make an account</button>
-        
-    </div>
-
-
+    <form action="../controllers/UserController.php" method="post">
+        <div class="sign_module">
+            <p class="titlu_app">ComPaste</p>
+            <table>
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" placeholder="Your username" name="username"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" placeholder="Your email" name="email"></td>
+                </tr>
+                <tr>
+                    <td>Set your password</td>
+                    <td><input type="password" placeholder="Your password" name="password"></td>
+                </tr>
+                <tr>
+                    <td>Confirm password</td>
+                    <td><input type="password" placeholder="Confirm password" name="c_password"></td>
+                </tr>
+            </table>
+            <button type="submit" class="buton">Make an account</button>
+        </div>
+    </form>
 </body>
-
 </html>

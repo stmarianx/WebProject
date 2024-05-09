@@ -14,7 +14,7 @@ CREATE TABLE posts (
     Language VARCHAR(11),
     author_id INT NOT NULL,
     Post TEXT,
-    password VARCHAR(100) 
+    password VARCHAR(300) 
 );
 
 CREATE TABLE post_author_association (
