@@ -22,3 +22,11 @@ CREATE TABLE post_author_association (
     idAuthor INT NOT NULL,
     PRIMARY KEY (idPostare, IdAuthor)
 );
+
+
+CREATE TABLE history_of_post (
+    IdPostare INT NOT NULL,
+    text VARCHAR(255) NOT NULL,
+    version INT NOT NULL,
+    Modification_Time TIMESTAMP
+);

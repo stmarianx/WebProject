@@ -7,7 +7,8 @@ body{
 }
 
 .sign_module{
-    margin:auto;
+    margin-left:auto;
+    margin-right: auto;
     margin-top: 10%;
     align-items: center;
     width: 90%;
@@ -43,7 +44,8 @@ table{
     margin-bottom: 5%;
     width: 50%;
     align-self: center;
-    margin-left: 11%;
+    margin-left:auto;
+    margin-right: auto;
 }
 
 td,th{

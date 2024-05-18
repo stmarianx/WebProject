@@ -7,21 +7,26 @@
     <link rel="stylesheet" href="../style/log.css">
 </head>
 <body>
+<form action="../controllers/UserController.php?action=login" method="post">
 <div class="log_module">
     <p class="titlu_app">ComPaste</p>
     <label for="username" class="deasupra1">Username:</label>
-    <input type="text" id="username" class="logare" placeholder="Enter your username" oninput="fct1()" >
+    <input type="text" id="username" name="username" class="logare" placeholder="Enter your username" oninput="fct1()">
 
     <label for="password" class="deasupra2">Password:</label>
-    <input type="password" id="password" class="logare" placeholder="Enter your password" oninput="fct2()" >
+    <input type="password" id="password" name="password" class="logare" placeholder="Enter your password" oninput="fct2()">
 
-    <div class="buton" onclick="location.href='utilizator_logat.html'">Log in</div>
+    <?php if(!empty($error)): ?>
+    <div style="color:red; font-weight:bold;"><?php echo $error; ?></div>
+    <?php endif; ?>
+    <button type="submit" class="buton">Log in</button>
     <hr>
     <div id="loginHelp">
         <a href="forgot_password.html">Forgot your password?</a>
         <a href="signup.html">Sign up</a>
     </div>
 </div>
+</form>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
