@@ -1,4 +1,7 @@
 <?php
+
+namespace controllers;
+
 require_once '../controllers/controller.php';
 
 class UserController extends Controller
@@ -28,26 +31,24 @@ class UserController extends Controller
     public function signup()
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      
+//            var_dump($_POST);
             $username = $_POST["username"];
             $email = $_POST["email"];
             $password = $_POST["password"];
             $c_password = $_POST["c_password"];
 
             if ($password !== $c_password) {
-               // header("Location: signup.php?error=password_mismatch");
+                // header("Location: signup.php?error=password_mismatch");
                 exit;
-            }
-            else {
+            } else {
                 $this->model->addUser($username, $email, $password);
                 $this->view->main_page();
             }
-             
-        }
-        else 
-        {
+
+        } else {
             $this->view->signup_form();
         }
+
     }
 
     public function log_in()
@@ -55,16 +56,13 @@ class UserController extends Controller
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $username = $_POST["username"];
             $password = $_POST["password"];
-            if($username!= null && $password != null)
-               if($this->model->checkUser($username,$password)==true)
-               {
-                   $_SESSION['username']=$username;
-                   $this->view->succes();
-               }
-               else 
-               {
+            if ($username != null && $password != null)
+                if ($this->model->checkUser($username, $password) == true) {
+                    $_SESSION['username'] = $username;
+                    $this->view->succes();
+                } else {
                     $this->view->fail("Wrong Password or User");
-               }
+                }
             else {
                 $this->view->fail("Empty fields are not allowed");
             }

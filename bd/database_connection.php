@@ -1,11 +1,12 @@
 <?php
-class DatabaseConnection {
+class DatabaseConnection { //The singleton
     private static $instance;
     private $connection; 
 
     
     private function __construct() {
-        $this->connection = new PDO('mysql:host=localhost; dbname=compaste', 'root', '');
+        echo "DA";
+        $this->connection = new PDO('mysql:host=localhost;dbname=compaste', 'root', 'password');
     }
 
 
